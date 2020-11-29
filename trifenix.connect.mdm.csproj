@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>mdm</AssemblyName>
+     <id>mdm/id>
+    
+    <title>Metadata model</title>
+    <authors>Trifenix</authors>
+    <owners>trifenix</owners>
+    <projectUrl>https://www.trifenix.io</projectUrl>
+    <iconUrl>https://logos.trifenix.io/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Metadata model base de trifenix connect</description>
+    <releaseNotes>Primera publicación</releaseNotes>
+    <copyright>Trifenix®</copyright>
+    <IsPackable>true</IsPackable>
+    <tags>trifenix connect</tags>
+    <dependencies>
+      <!--<dependency id="bootstrap" version="4.1.1" />
+          <dependency id="FontAwesome" version="4.7.0" />-->
+    </dependencies>
+    <PackageType>Dependency</PackageType>
+    <summary> Trifenix connect es una plataforma de desarrollo bajo una estructura IMES </summary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
