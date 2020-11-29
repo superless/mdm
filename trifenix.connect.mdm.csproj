@@ -1,27 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>mdm</AssemblyName>
-     <id>mdm/id>
-    
-    <title>Metadata model</title>
+    <TargetFramework>netstandard2.0</TargetFramework>    
+    <PackageIcon>logo.png</PackageIcon>
+    <Company>Trifenix</Company>
+    <Product>mdm</Product>
+    <PackageTags>https://github.com/trifenix/mdm/</PackageTags>
+    <RootNamespace>trifenix</RootNamespace>
+    <RepositoryUrl>https://github.com/trifenix/mdm/</RepositoryUrl> 
+    <id>trifenix-mdm</id>    
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <title>Mdm</title>
     <authors>Trifenix</authors>
     <owners>trifenix</owners>
     <projectUrl>https://www.trifenix.io</projectUrl>
-    <iconUrl>https://logos.trifenix.io/logo.png</iconUrl>
+    <iconUrl>https://images.trifenix.io/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Metadata model base de trifenix connect</description>
-    <releaseNotes>Primera publicación</releaseNotes>
-    <copyright>Trifenix®</copyright>
+    <description>Entidad base de trifenix connect</description>
+    <releaseNotes>Pendiente</releaseNotes>
+    <copyright>MIT Open Source</copyright>
     <IsPackable>true</IsPackable>
-    <tags>trifenix connect</tags>
-    <dependencies>
-      <!--<dependency id="bootstrap" version="4.1.1" />
-          <dependency id="FontAwesome" version="4.7.0" />-->
-    </dependencies>
+    <tags>lowcode search devops</tags>
     <PackageType>Dependency</PackageType>
-    <summary> Trifenix connect es una plataforma de desarrollo bajo una estructura IMES </summary>
+    <summary>Entidad base de trifenix connect</summary>
+    <DocumentationFile>mdm.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
