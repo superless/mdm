@@ -1,13 +1,14 @@
 ﻿using System;
 namespace trifenix.connect.mdm.validation_attributes
 {
-    [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
+    
     /// <summary>
     /// Atributo que declara una referencia
     /// es decir, que una propiedad es una referencia de otro elemento
     /// asignando el identificador de este
     /// Este atributo es utilizado para determinar si existe el elemento en la base de datos.
     /// </summary>
+    [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
     public class ReferenceAttribute : Attribute
     {
         /// <summary>

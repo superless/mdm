@@ -6,6 +6,7 @@ namespace trifenix.connect.mdm_attributes
     /// <summary>
     /// Propiedad que permite identificar de que tipo es una propiedad
     /// </summary>
+    /// <related kind='inheritance'>BaseIndexAttribute</related>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public class PropertyIndexAttribute : BaseIndexAttribute
     {

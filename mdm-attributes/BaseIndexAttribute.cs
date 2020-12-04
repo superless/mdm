@@ -4,6 +4,10 @@ using System.Text;
 
 namespace trifenix.connect.mdm_attributes
 {
+
+    /// <summary>
+    /// atributo base de entitySearch
+    /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
     public class BaseIndexAttribute : Attribute
     {

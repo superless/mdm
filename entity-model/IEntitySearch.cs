@@ -22,6 +22,8 @@ namespace trifenix.connect.mdm.entity_model
         /// </summary>
         string id { get; set; }
 
+        
+
         // TODO : el campo de fecha en el entity search aún no es utilizado y existe un timestamp en todos los elementas para investigar si es posible su reemplazo, el objetivo de este campo es uso de TTL (time to live).
         /// <summary>
         /// Fecha de creación del elemento

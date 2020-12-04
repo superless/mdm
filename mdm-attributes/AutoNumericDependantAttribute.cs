@@ -9,13 +9,17 @@ namespace trifenix.connect.mdm_attributes
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public class AutoNumericDependantAttribute : PropertyIndexAttribute
     {
+        /// <summary>
+        /// inicializa el index como string,
+        /// este campo no pude ser de otro tipo.
+        /// </summary>
         public AutoNumericDependantAttribute()
         {
             KindIndex = (int)KindProperty.STR;
         }
 
         /// <summary>
-        /// la autonumeneración puede depnder de otra entidad, para comenzar desde el principio,
+        /// la autonumeneración puede depender de otra entidad, para comenzar desde el principio,
         /// por ejemplo, una dosis tendrá un autonumérico que depende de producto,
         /// el producto 1, tendría  la dosis 1, 2 y 3
         /// y el producto 2, tendría la dosis 1 y 2.
