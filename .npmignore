@@ -6,3 +6,4 @@ definition-manifest.json
 .devcontainer/library-scripts/node-debian.sh
 .vscode
 .npmignore
+.nuget-packages
