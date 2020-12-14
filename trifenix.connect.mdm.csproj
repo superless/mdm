@@ -33,6 +33,7 @@
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage
     </TargetsForTfmSpecificBuildOutput>
     <DocumentationFile>trifenix.connect.mdm.xml</DocumentationFile>
+    <DocumentationDestinationFolder>models</DocumentationDestinationFolder>
   </PropertyGroup>
 
   <ItemGroup>

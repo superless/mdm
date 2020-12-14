@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -21,24 +21,23 @@ steps:
     command: 'build'
     projects: '**/*.csproj'
   displayName: "build solution"
-- task: DocFxTask@0
-  inputs:
-    solution: '.\docfx_project\docfx.json'
 
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/_site'
-    Contents: '**'
-    TargetFolder: $(Build.ArtifactStagingDirectory)
-    CleanTargetFolder: true
-#fin copiando archivos a salida
+- script: |      
+    sudo apt install -y unzip
+    wget https://scripts.trifenix.io/vsxmd/Vsxmd.$(vsxmd-version-production).zip
+    unzip Vsxmd.$(vsxmd-version-production).zip -o ./vsxmd
+    dotnet ./vsxmd/Vsxmd.dll trifenix.connect.mdm.xml nuget-packages
+    git config --global user.email "alejandro.iglesias@trifenix.io"
+    git config --global user.name "alejandro.iglesias"    
+    git clone https://alejandro.iglesias:$(script-token)@github.com/trifenix/docs-trifenix-connect.git web
+    cp -r ./nuget-packages/* ./web/src/pages/nuget-packages
+    git push origin master
 
-#publicando artifacts
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: $(Build.ArtifactStagingDirectory)
-    ArtifactName: 'drop'
-    publishLocation: 'container'
+
+      
+
+  displayName: "publicando documentación"
+
 
 

@@ -104,6 +104,24 @@
             Implementación para tests.
             </summary>
         </member>
+        <member name="P:trifenix.connect.mdm.entity_model.BoolBaseProperty.index">
+            <summary>
+            índice de la propiedad
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:trifenix.connect.mdm.entity_model.BoolBaseProperty.value">
+            <summary>
+            valor de la propiedad
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:trifenix.connect.mdm.entity_model.BoolBaseProperty.facet">
+            <summary>
+            facet de la propiedad
+            </summary>
+            <value></value>
+        </member>
         <member name="T:trifenix.connect.mdm.entity_model.DblBaseProperty">
             <summary>
             implementación para typegen.
@@ -1001,6 +1019,21 @@
             Constructor con el tipo de entidad a la que se refiere el id
             </summary>
             <param name="_entityOfReference">Entidad de la Referencia</param>
+        </member>
+        <member name="T:trifenix.connect.entity_model.Namespace">
+             <summary>
+             Atributos de trifenix connect,
+             los atributos permitirán asignar la metadata, para la centralización.
+             # AutoNumericDependantAttribute
+             Cuando se asigna este atributo, el campo que lo tenga generará una autonumeración dependiente de otra entidad.
+             por ejemplo, una factura, el autonumérico de los productos relacionados, avanzará solo por la id de la factura.
+             # BaseIndexAtribute
+             Tiene los principales atributos para la identificación de una propiedad de un entitySearch}
+             * **índice**, índica el número entero que lo representa (Cada clase y cada propiedad del modelo se relaciona a este índice).
+             * **visible**, determina si el campo es o no visible en el modelo entitySearch.
+             * **isEntity**, determina si la propiedad representa una entidad, es es una entidad la propiedad tendrá el identificador y el índice de esta.
+             * **kindIndex**, determina el tipo de índice
+            </summary>
         </member>
         <member name="T:trifenix.connect.mdm_attributes.AutoNumericDependantAttribute">
             <summary>
