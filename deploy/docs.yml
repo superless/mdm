@@ -34,6 +34,7 @@ steps:
     git clone https://alejandro.iglesias:$(script-token)@github.com/trifenix/docs-trifenix-connect.git web
     cp -r ./nuget-packages/* ./web/src/pages/nuget-packages
     cd ./web
+    git add . && git commit -m 'nueva documentacion mdm' 
     git push origin master
 
 
