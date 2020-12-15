@@ -28,7 +28,6 @@ steps:
     wget https://scripts.trifenix.io/vsxmd/Vsxmd.$(vsxmd-version-production).zip
     unzip Vsxmd.$(vsxmd-version-production).zip -d ./vsxmd
     dotnet ./vsxmd/Vsxmd.dll trifenix.connect.mdm.xml nuget-packages
-
     git config --global user.email "alejandro.iglesias@trifenix.io"
     git config --global user.name "alejandro.iglesias"    
     git clone https://alejandro.iglesias:$(script-token)@github.com/trifenix/docs-trifenix-connect.git web

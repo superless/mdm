@@ -1,6 +1,9 @@
 # TRIFENIX CONNECT
 Trifenix connect son los cimientos tanto en arquitectura como metodológicos para la construcción de programas en la [nube nativa](https://en.wikipedia.org/wiki/Cloud_native_computing), con una base [devops](https://es.wikipedia.org/wiki/DevOps) y [scrum](https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)), con el fin de ofrecer aplicaciones de escalabilidad ilimitada e instantaniedad en la experiencia de usuario.
 
+
+[github](https://github.com/trifenix/nuget-cli-example-lib)
+
 ![genkidama](https://images.trifenix.io/genkidama.gif)
 
 **Obviamente Open Source**
