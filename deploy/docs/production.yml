@@ -9,6 +9,12 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables: 
+  BuildConfiguration: 'release'
+  # nombre del archivo csproj
+  name-project: "trifenix-main"
+  folder: "trifenix-main/"
+
 steps:
 - task: DotNetCoreCLI@2
   inputs:
@@ -26,12 +32,15 @@ steps:
 - script: |      
     sudo apt install -y unzip
     wget https://scripts.trifenix.io/vsxmd/Vsxmd.$(vsxmd-version-production).zip
-    unzip Vsxmd.$(vsxmd-version-production).zip -d ./vsxmd
-    dotnet ./vsxmd/Vsxmd.dll trifenix.connect.mdm.xml nuget-packages
+    unzip Vsxmd.$(vsxmd-version-production).zip -d ./vsxmd.$(vsxmd-version-production)
+    pwd
+    ls
+    dotnet ./vsxmd.$(vsxmd-version-production)/Vsxmd.dll ./$(folder)$(name-project).xml nuget-packages
+
     git config --global user.email "alejandro.iglesias@trifenix.io"
     git config --global user.name "alejandro.iglesias"    
     git clone https://alejandro.iglesias:$(script-token)@github.com/trifenix/docs-trifenix-connect.git web
-    cp -r ./nuget-packages/* ./web/src/pages/nuget-packages
+    cp -r ./$(folder)nuget-packages/* ./web/src/pages/nuget-packages
     cd ./web
     git add . && git commit -m 'nueva documentacion mdm' 
     git push origin master
