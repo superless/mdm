@@ -1,7 +1,9 @@
 trigger:
     branches:
       include:        
-        - master  
+        - develop
+        - release/*
+  
 pool:
   vmImage: "ubuntu-latest"
 
@@ -22,13 +24,12 @@ steps:
   - task: gitversion/setup@0
     inputs:
       versionSpec: '5.1'
-      includePrerelease: false
+      includePrerelease: true
     displayName : "Configurando gitversion"
 
   - task: gitversion/execute@0
     inputs:
-      useConfigFile: true
-      configFilePath: "deploy/gitConfig.yml" 
+      useConfigFile: false      
     displayName: "generando la nueva versión"
   
   # toma todos los proyectos que existan además de quien tiene el nuget.
@@ -37,7 +38,7 @@ steps:
       command: 'restore'
       projects: '**/*.csproj'
       feedsToUse: 'select'
-      vstsFeed: '$(default-feed)'      
+      vstsFeed: '$(draft-feed)'      
       versioningScheme: byBuildNumber
 
 
