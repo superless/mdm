@@ -11,16 +11,16 @@
     <PackageTags>https://github.com/trifenix/mdm/</PackageTags>
     <RootNamespace>trifenix</RootNamespace>
     <RepositoryUrl>https://github.com/trifenix/mdm/</RepositoryUrl> 
-    <nugetUrl>https://www.nuget.org/packages/trifenix-main/</nugetUrl>
-    <devopsUrl><![CDATA[https://dev.azure.com/trifenix-connect/base-public-components/_packaging?_a=package&feed=trifenix&package=trifenix-main&protocolType=NuGet]]></devopsUrl>
-    <releaseBadgeUrl><![CDATA[https://vsrm.dev.azure.com/trifenix-connect/_apis/public/Release/badge/0e468e6a-c444-43d7-95e1-61f36d80dbd2/1/1]]></releaseBadgeUrl>
+    <nugetUrl>https://www.nuget.org/packages/trifenix.connect.mdm/</nugetUrl>
+    <devopsUrl><![CDATA[https://dev.azure.com/trifenix-connect/base-public-components/_packaging?_a=package&feed=trifenix&package=trifenix.connect.mdm&protocolType=NuGet]]></devopsUrl>
+    <releaseBadgeUrl>https://feeds.dev.azure.com/trifenix-connect/_apis/public/Packaging/Feeds/4227dc51-6e8c-42c1-97ca-a33e6615385d/Packages/2b2a691b-0198-4745-9b09-12fee3db522c/Badge</releaseBadgeUrl>
     <id>trifenix-mdm</id>    
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <title>MdM</title>
     <authors>Trifenix</authors>
     <owners>trifenix</owners>
-    <projectUrl>https://coonect.trifenix.io/nuget-packages/trifenix-mdm</projectUrl>
-    <iconUrl>https://logos.trifenix.io/logo.24x24.png</iconUrl>
+    <projectUrl>https://connect.trifenix.io/nuget-packages/trifenix-mdm</projectUrl>
+    <iconUrl>https://logos.trifenix.io/logo.48x48.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Entidad base de trifenix connect</description>
     <releaseNotes>Pendiente</releaseNotes>
