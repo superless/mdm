@@ -6,7 +6,7 @@
     public class EntitySearchDisplayInfo
     {
         /// <summary>
-        /// Título
+        /// Título de Entity Search
         /// </summary>
         public string Title { get; set; }
         /// <summary>
