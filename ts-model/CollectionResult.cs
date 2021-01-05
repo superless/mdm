@@ -42,5 +42,12 @@ namespace trifenix.connect.mdm.ts_model
         /// Listado de items para el ordenamiento
         /// </summary>
         public List<OrderItem> OrderItems { get; set; }
+
+
+        /// <summary>
+        /// Este campo es exclusivo para la generación de typescript
+        /// permite poder importatGeoPoinTs
+        /// </summary>
+        public GeoPointTs OnlyForTsGeneticEntity { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace trifenix.connect.mdm.ts_model
     /// <summary>
     /// Clase de tipo geo, que será generada como componente typescript
     /// para identificar un campo de tipo geo.
+    /// También se usa para test
     /// </summary>
     public class GeographyProperty : IProperty<GeoPointTs>
     {
@@ -18,5 +19,8 @@ namespace trifenix.connect.mdm.ts_model
         /// valor de la propiedad de tipo geo.
         /// </summary>
         public GeoPointTs value { get; set; }
+
+
+        
     }
 }
