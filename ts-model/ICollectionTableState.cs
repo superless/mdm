@@ -8,8 +8,8 @@ namespace trifenix.connect.mdm.ts_model
     /// Datos comunes de las consultas de una tabla.
     /// que estarán presente en las consultas de una tabla.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public interface ICollectionTableState<T>{
+ 
+    public interface ICollectionTableState<T> : ICollectionResult<T>{
 
         /// <summary>
         /// página actual.
