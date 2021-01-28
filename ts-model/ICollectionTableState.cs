@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using trifenix.connect.mdm.entity_model;
+
 namespace trifenix.connect.mdm.ts_model
 {
 
@@ -9,13 +11,12 @@ namespace trifenix.connect.mdm.ts_model
     /// que estarán presente en las consultas de una tabla.
     /// </summary>
  
-    public interface ICollectionTableState<T> : ICollectionResult<T>{
+    public interface ICollectionTableState<T>{
 
         /// <summary>
         /// página actual.
         /// </summary>
         int Current { get; set; }
-
 
         /// <summary>
         /// índice de la entidad de la tabla.
@@ -40,5 +41,20 @@ namespace trifenix.connect.mdm.ts_model
         /// Listado de items para el ordenamiento
         /// </summary>
         List<OrderItem> OrderItems { get; set; }
+
+        /// <summary>
+        /// items que se encuentran en cada página.
+        /// </summary>
+        Dictionary<int, IEntitySearch<T>[]> ItemsByPage { get; set; }
+
+
+        /// <summary>
+        /// facets encontradas.
+        /// </summary>
+        Facet[] Facets { get; set; }
+
+
+
+
     }
 }
