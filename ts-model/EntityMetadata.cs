@@ -77,6 +77,6 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// propiedades de tipo entidad.
         /// </summary>
-        public Dictionary<int, PropertyMetadata> relData { get; set; }
+        public Dictionary<int, RelatedPropertyMetadata> relData { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace trifenix.connect.mdm_attributes
         /// <summary>
         /// Se usa exclusivamente cuando una entidad apunto a otra entidad en más de una propiedad.
         /// el modelo no puede soportar dos propiedades que apuntan a la misma entidad.
-        /// cuando se da el caso, se debe crear un bypass, por ejemplo.
+        /// cuando se da el caso, se debe crear un bypass (índice real), por ejemplo.
         /// Un cuartel apunta a variedad, a través de la propiedad variedad, pero también en polinizador.
         /// el modelo mdm cuando detecta que existen varias propiedades que apuntan a la misma entidad
         /// los agrupa y los lleva como un array de entidades relacionadas, con el índice y su valor, no diferenciando que sean propiedades distintas.
@@ -32,6 +32,6 @@ namespace trifenix.connect.mdm_attributes
         /// !Importante, esto no afecta el modelo de clases, el modelo de clases se mantiene igual, solo se debe considerar a nivel de los atributos MDM
         /// y crear una clase que haga la referencia, como en el ejemplo Polinator.
         /// </summary>
-        public int Bypass { get; set; } = -1;
+        public int RealIndex { get; set; } = -1;
     }
 }
