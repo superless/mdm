@@ -72,5 +72,12 @@ namespace trifenix.connect.mdm.ts_model
         /// Grupo al que pertenece.
         /// </summary>
         public GroupInput[] Group { get; set; }
+
+
+        /// <summary>
+        /// índice real de una entidad obtenida desde la metadata.
+        /// </summary>
+        public int? RealIndex { get; set; }
+
     }
 }
