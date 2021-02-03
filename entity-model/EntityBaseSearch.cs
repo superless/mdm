@@ -1,5 +1,5 @@
 ﻿using System;
-using trifenix.connect.mdm.ts_model;
+
 
 namespace trifenix.connect.mdm.entity_model
 {
@@ -72,8 +72,14 @@ namespace trifenix.connect.mdm.entity_model
         /// </summary>
         public IStrProperty[] sug { get; set; }
 
+        /// <summary>
+        /// Hash del modelo
+        /// </summary>
         public string hm { get; set; }
 
+        /// <summary>
+        /// hash de las cabeceras
+        /// </summary>
         public string hh { get; set; }
 
         /// <summary>

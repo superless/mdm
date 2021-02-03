@@ -17,9 +17,16 @@
         /// Descripción
         /// </summary>
         public string Description { get; set; }
+        
         /// <summary>
         /// Valor de Columna
         /// </summary>
         public string Column { get; set; }
+
+
+        /// <summary>
+        /// PlaceHolder
+        /// </summary>
+        public string PlaceHolder { get; set; }
     }
 }

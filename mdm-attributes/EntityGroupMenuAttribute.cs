@@ -9,6 +9,8 @@ namespace trifenix.connect.mdm_attributes
     /// </summary>
     [AttributeUsage(AttributeTargets.Class , AllowMultiple = true)]
     public class EntityGroupMenuAttribute : Attribute {
+
+
         public EntityGroupMenuAttribute(int menuId, PhisicalDevice device, int submenu )
         {
             Grupo = new GroupMenu
