@@ -33,5 +33,11 @@ namespace trifenix.connect.mdm_attributes
         /// y crear una clase que haga la referencia, como en el ejemplo Polinator.
         /// </summary>
         public int RealIndex { get; set; } = -1;
+
+        /// <summary>
+        /// Indica si la entidad relacionada debe ser un dropdown en 
+        /// la creación del formulario de la entidad
+        /// </summary>
+        public bool Dropdown { get; set; } = true;
     }
 }
