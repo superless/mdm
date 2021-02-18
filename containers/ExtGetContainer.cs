@@ -11,7 +11,7 @@ namespace trifenix.connect.mdm.containers
     {
         /// <summary>
         /// Status del resultado
-        /// Error, Success o emptyResults
+        /// Error, Success o emptyResults.
         /// </summary>
         public ExtGetDataResult StatusResult { get; set; }
 
