@@ -4,14 +4,14 @@ using trifenix.connect.mdm.enums;
 namespace trifenix.connect.mdm.containers
 {
     /// <summary>
-    /// Contenedor para respuestas get
+    /// Contenedor para respuestas get.
     /// </summary>
     /// <typeparam name="T">Tipo de elemento a recuperar</typeparam>
     public class ExtGetContainer<T>
     {
         /// <summary>
         /// Status del resultado
-        /// Error, Success o emptyResults
+        /// Error, Success o emptyResults.
         /// </summary>
         public ExtGetDataResult StatusResult { get; set; }
 
