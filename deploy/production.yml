@@ -49,7 +49,7 @@ steps:
     inputs: 
       command: pack
       packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(echo trifenix-versions update https://github.com/trifenix/versions.git --token e334edd9e272f93fe54bb04d9aa7d10f6d08a72c --user devops --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId))' 
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(trifenix-versions update https://github.com/trifenix/versions.git --token e334edd9e272f93fe54bb04d9aa7d10f6d08a72c --user devops --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId))' 
       versioningScheme: byEnvVar 
       versionEnvVar: SemVer
   - task: SonarQubeAnalyze@4
