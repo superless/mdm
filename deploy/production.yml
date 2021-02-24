@@ -43,7 +43,7 @@ steps:
     inputs:
       script: |
         dotnet tool install trifenix.versions.console -g
-        FOR /F "tokens=* USEBACKQ" %%F IN (`trifenix-versions update https://github.com/trifenix/versions.git --token $(script-token) --user trifenix --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)`) DO (
+        FOR /F "tokens=* USEBACKQ" %%F IN (`trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)`) DO (
           SET var=%%F
         )
         ECHO %var%
