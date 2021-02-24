@@ -39,18 +39,6 @@ steps:
       vstsFeed: '$(default-feed)'      
       versioningScheme: byBuildNumber
 
-  
-
-  # genera paquete usando la versión proporcionada por gitversion
-  - task: DotNetCoreCLI@2
-    displayName: 'dotnet pack' 
-    inputs: 
-      command: pack
-      packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(version)' 
-      versioningScheme: byEnvVar 
-      versionEnvVar: SemVer
-
   - task: CmdLine@2
     inputs:
       script: |
