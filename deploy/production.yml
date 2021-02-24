@@ -47,8 +47,8 @@ steps:
           SET var=%%F
         )
         ECHO %var%
-        dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var%
-    displayName: "instalando generador de versiones de trifenix"
+        dotnet pack $(name-project).csproj --no-build --configuration $(BuildConfiguration) /p:Version=%var% --output nupkgs
+    displayName: "Generando paquete con la versión"
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
