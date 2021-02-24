@@ -5,7 +5,7 @@ trigger:
       include:        
         - master  
 pool:
-  vmImage: "ubuntu-16.04"
+  vmImage: "windows-latest"
 
 variables: 
   BuildConfiguration: 'release'
@@ -27,17 +27,7 @@ steps:
       scannerMode: 'MSBuild'
       projectKey: 'AGROFENIX-mdm'
       projectName: 'AGROFENIX-mdm'
-  - task: gitversion/setup@0
-    inputs:
-      versionSpec: '5.1'
-      includePrerelease: false
-    displayName : "Configurando gitversion"
-
-  - task: gitversion/execute@0
-    inputs:
-      useConfigFile: true
-      configFilePath: "deploy/gitConfig.yml" 
-    displayName: "generando la nueva versión"
+  
   
   # toma todos los proyectos que existan además de quien tiene el nuget.
   - task: DotNetCoreCLI@2
@@ -48,6 +38,10 @@ steps:
       vstsFeed: '$(default-feed)'      
       versioningScheme: byBuildNumber
 
+  - task: CmdLine@2
+    inputs:
+      script: 'dotnet tool install trifenix.versions.console -g'
+    displayName: "instalando generador de versiones de trifenix"
 
   # genera paquete usando la versión proporcionada por gitversion
   - task: DotNetCoreCLI@2
@@ -55,7 +49,7 @@ steps:
     inputs: 
       command: pack
       packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)' 
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(echo trifenix-versions update https://github.com/trifenix/versions.git --token e334edd9e272f93fe54bb04d9aa7d10f6d08a72c --user devops --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId))' 
       versioningScheme: byEnvVar 
       versionEnvVar: SemVer
   - task: SonarQubeAnalyze@4
