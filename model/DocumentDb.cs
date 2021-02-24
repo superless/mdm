@@ -22,7 +22,7 @@ namespace trifenix.model
         public abstract string ClientId { get; set; }
 
         /// <summary>
-        /// Indicador de estado de la entidad
+        /// Indicador de estado de la entidad.
         /// </summary>
         public abstract bool Enable { get; set; }
 
