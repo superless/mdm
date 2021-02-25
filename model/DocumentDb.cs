@@ -22,9 +22,17 @@ namespace trifenix.model
         public abstract string ClientId { get; set; }
 
         /// <summary>
-        /// Indicador de estado de la entidad
+        /// Indicador de estado de la entidad.
         /// </summary>
-        public abstract bool State { get; set; }
+        public abstract bool Enable { get; set; }
+
+        /// <summary>
+        /// Partición dentro de base de datos documental,
+        /// esto permite a través de un indice particionar un segmento del indice de la base de datos
+        /// por nombre de la entidad o nombre de la clase.
+        /// </summary>        
+
+        public string DocumentPartition { get; set; }
 
     }
 }
