@@ -27,7 +27,7 @@ steps:
       script: |
         dotnet tool install trifenix.versions.console -g
         $currentVersion = trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)        
-        $setVersion = '##vso[task.setvariable variable=version;]' + currentVersion
+        $setVersion = '##vso[task.setvariable variable=version;]' + $currentVersion
         Write-Host $setVersion
     displayName: generando variable version con TRIFENIX VERSIONS
 
