@@ -48,7 +48,9 @@ steps:
           SET var=%%F
         )
         ECHO %var% > version.txt
-        ECHO %var%
+        Write-Host "##vso[task.setvariable variable=x;]%var%"
+        ECHO $(x)
+        
         
     displayName: "Generando paquete con la versión"
   - task: CmdLine@2
@@ -57,7 +59,7 @@ steps:
         ECHO %var%
         ls
         type version.txt
-        
+
         
     displayName: "Generando paquete con la versión"
   # especial : dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
