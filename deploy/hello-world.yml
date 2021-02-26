@@ -34,15 +34,7 @@ steps:
         Write-Host $setVersion
     displayName: generando variable version con TRIFENIX VERSIONS
 
-  # configuración sonarqube  
-  - task: SonarQubePrepare@4
-    inputs:
-      SonarQube: 'AGROFENIX-mdm'
-      scannerMode: 'MSBuild'
-      projectKey: 'AGROFENIX-mdm'
-      projectName: 'AGROFENIX-mdm'
-      projectVersion: '$(version)'      
-    displayName: preparación sonarqube
+
   
   
   #toma todos los proyectos que existan además de quien tiene el nuget.
