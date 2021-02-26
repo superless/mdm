@@ -63,17 +63,8 @@ steps:
   - task: CmdLine@2
     inputs:
       script: |
-        echo $(version)
-    displayName: mostrando variable en el set.
-
-  - task: DotNetCoreCLI@2    
-    inputs: 
-      command: pack
-      packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(version)' 
-      versioningScheme: byEnvVar 
-      versionEnvVar: SemVer
-    displayName: 'dotnet pack' 
+        dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=$(version) --output $(Build.ArtifactStagingDirectory)
+    displayName: dotnet pack
     
   # especial : dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
   - task: SonarQubeAnalyze@4
