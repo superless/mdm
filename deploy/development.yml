@@ -45,10 +45,8 @@ steps:
       targetType: 'inline'
       script: |
         dotnet tool install trifenix.versions.console -g
-        FOR /F "tokens=* USEBACKQ" %%F IN (`trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)`) DO (
-          SET var=%%F
-        )
-        $setVersion = '##vso[task.setvariable variable=version;]' + %var%
+        $currentVersion = trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)        
+        $setVersion = '##vso[task.setvariable variable=version;]' + currentVersion
         Write-Host $setVersion
   - task: CmdLine@2
     inputs:
