@@ -48,7 +48,7 @@ steps:
           SET var=%%F
         )
         ECHO %var% > version.txt
-        Write-Host "##vso[task.setvariable variable=x;]%var%"
+        "##vso[task.setvariable variable=x;]%var%"
         ECHO $(x)
         
         
