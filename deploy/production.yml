@@ -21,16 +21,35 @@ pr: none
   
 steps:
 
-  
+  # generamos versión del paquete.
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        dotnet tool install trifenix.versions.console -g
+        $currentVersion = trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)        
+        $setVersion = '##vso[task.setvariable variable=version;]' + $currentVersion
+        Write-Host $setVersion
+    displayName: generando variable version con TRIFENIX VERSIONS
+
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo $(version) $(draft-feed)
+    displayName: mostrando variable en el set.
+
+  # configuración sonarqube  
   - task: SonarQubePrepare@4
     inputs:
       SonarQube: 'AGROFENIX-mdm'
       scannerMode: 'MSBuild'
       projectKey: 'AGROFENIX-mdm'
       projectName: 'AGROFENIX-mdm'
+      projectVersion: '$(version)'      
+    displayName: preparación sonarqube
   
   
-  # toma todos los proyectos que existan además de quien tiene el nuget.
+  #toma todos los proyectos que existan además de quien tiene el nuget.
   - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
@@ -38,17 +57,16 @@ steps:
       feedsToUse: 'select'
       vstsFeed: '$(default-feed)'      
       versioningScheme: byBuildNumber
+    displayName: restore dotnet
 
+  
   - task: CmdLine@2
     inputs:
       script: |
-        dotnet tool install trifenix.versions.console -g
-        FOR /F "tokens=* USEBACKQ" %%F IN (`trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch master --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)`) DO (
-          SET var=%%F
-        )
-        ECHO %var%
-        dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
-    displayName: "Generando paquete con la versión"
+        dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=$(version) --output $(Build.ArtifactStagingDirectory)
+    displayName: dotnet pack
+    
+  # especial : dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
   - task: SonarQubeAnalyze@4
   - task: SonarQubePublish@4
     inputs:
