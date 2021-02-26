@@ -20,59 +20,60 @@ pr: none
   
 steps:
 
-  
-  # - task: SonarQubePrepare@4
-  #   inputs:
-  #     SonarQube: 'AGROFENIX-mdm'
-  #     scannerMode: 'MSBuild'
-  #     projectKey: 'AGROFENIX-mdm'
-  #     projectName: 'AGROFENIX-mdm'
-  #     projectVersion: '1.1'
-  #     extraProperties: 'sonar.branch.name=develop'
-  
-  
-  # toma todos los proyectos que existan además de quien tiene el nuget.
-  # - task: DotNetCoreCLI@2
-  #   inputs:
-  #     command: 'restore'
-  #     projects: '**/*.csproj'
-  #     feedsToUse: 'select'
-  #     vstsFeed: '$(default-feed)'      
-  #     versioningScheme: byBuildNumber
-
+  # generamos versión del paquete.
   - task: PowerShell@2
     inputs:
       targetType: 'inline'
       script: |
         dotnet tool install trifenix.versions.console -g
         $currentVersion = trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)        
-        $setVersion = '##vso[task.setvariable variable=version;]' + $currentVersion
+        $setVersion = '##vso[task.setvariable variable=version;]' + currentVersion
         Write-Host $setVersion
-  - task: CmdLine@2
-    inputs:
-      script: |
-        ECHO $(version)
-        
-        
-    displayName: "Generando paquete con la versión"
-  - task: CmdLine@2
-    inputs:
-      script: |
-        ECHO %var%
-        ls
-        type version.txt
+    displayName: generando variable version con TRIFENIX VERSIONS
 
-        
-    displayName: "Generando paquete con la versión"
+
+  # configuración sonarqube  
+  - task: SonarQubePrepare@4
+    inputs:
+      SonarQube: 'AGROFENIX-mdm'
+      scannerMode: 'MSBuild'
+      projectKey: 'AGROFENIX-mdm'
+      projectName: 'AGROFENIX-mdm'
+      projectVersion: '$(version)'
+      extraProperties: 'sonar.branch.name=develop'
+    displayName: preparación sonarqube
+  
+  
+  #toma todos los proyectos que existan además de quien tiene el nuget.
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'restore'
+      projects: '**/*.csproj'
+      feedsToUse: 'select'
+      vstsFeed: '$(default-feed)'      
+      versioningScheme: byBuildNumber
+    displayName: restore dotnet
+
+  
+
+  - task: DotNetCoreCLI@2    
+    inputs: 
+      command: pack
+      packagesToPack: '**/$(name-project).csproj'       
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(version)' 
+      versioningScheme: byEnvVar 
+      versionEnvVar: SemVer
+    displayName: 'dotnet pack' 
+    
   # especial : dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
-  # - task: SonarQubeAnalyze@4
-  # - task: SonarQubePublish@4
-  #   inputs:
-  #     pollingTimeoutSec: '300'
-  # # publica paquete para publicar.
-  # - task: PublishBuildArtifacts@1
-  #   inputs:
-  #     pathtoPublish: "$(Build.ArtifactStagingDirectory)"
-  #     artifactName: drop
-  #     publishLocation: 'container'
-  #   displayName: "publish nuget"
+  - task: SonarQubeAnalyze@4
+  - task: SonarQubePublish@4
+    inputs:
+      pollingTimeoutSec: '300'
+  # publica paquete para publicar.
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      artifactName: drop
+      publishLocation: 'container'
+    displayName: "publish nuget"
