@@ -2,10 +2,9 @@ trigger:
     branches:
       include:        
         - develop
-        - release/*
-  
+
 pool:
-  vmImage: "ubuntu-16.04"
+  vmImage: "windows-latest"
 
 variables: 
   BuildConfiguration: 'release'
@@ -21,37 +20,56 @@ pr: none
   
 steps:
 
-  - task: gitversion/setup@0
+  # generamos versión del paquete.
+  - task: PowerShell@2
     inputs:
-      versionSpec: '5.1'
-      includePrerelease: true
-    displayName : "Configurando gitversion"
+      targetType: 'inline'
+      script: |
+        dotnet tool install trifenix.versions.console -g
+        $currentVersion = trifenix-versions update $(trifenix-versions) --token $(script-token) --user trifenix --email devops@trifenix.io --branch develop --name trifenix.connect.mdm --ktype nuget --build $(Build.BuildId)        
+        $setVersion = '##vso[task.setvariable variable=version;]' + currentVersion
+        Write-Host $setVersion
+    displayName: generando variable version con TRIFENIX VERSIONS
 
-  - task: gitversion/execute@0
+
+  # configuración sonarqube  
+  - task: SonarQubePrepare@4
     inputs:
-      useConfigFile: false      
-    displayName: "generando la nueva versión"
+      SonarQube: 'AGROFENIX-mdm'
+      scannerMode: 'MSBuild'
+      projectKey: 'AGROFENIX-mdm'
+      projectName: 'AGROFENIX-mdm'
+      projectVersion: '$(version)'
+      extraProperties: 'sonar.branch.name=develop'
+    displayName: preparación sonarqube
   
-  # toma todos los proyectos que existan además de quien tiene el nuget.
+  
+  #toma todos los proyectos que existan además de quien tiene el nuget.
   - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
-      projects: '*.csproj'
+      projects: '**/*.csproj'
       feedsToUse: 'select'
-      vstsFeed: '$(draft-feed)'      
+      vstsFeed: '$(default-feed)'      
       versioningScheme: byBuildNumber
+    displayName: restore dotnet
 
+  
 
-  # genera paquete usando la versión proporcionada por gitversion
-  - task: DotNetCoreCLI@2
-    displayName: 'dotnet pack' 
+  - task: DotNetCoreCLI@2    
     inputs: 
       command: pack
       packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)' 
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(version)' 
       versioningScheme: byEnvVar 
       versionEnvVar: SemVer
-
+    displayName: 'dotnet pack' 
+    
+  # especial : dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=%var% --output $(Build.ArtifactStagingDirectory)
+  - task: SonarQubeAnalyze@4
+  - task: SonarQubePublish@4
+    inputs:
+      pollingTimeoutSec: '300'
   # publica paquete para publicar.
   - task: PublishBuildArtifacts@1
     inputs:
