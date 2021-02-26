@@ -1,8 +1,9 @@
+# termine, parte 1.
+
 trigger:
     branches:
       include:        
-        - develop
-
+        - master  
 pool:
   vmImage: "windows-latest"
 
@@ -10,10 +11,9 @@ variables:
   BuildConfiguration: 'release'
   # nombre del archivo csproj
   name-project: "trifenix.connect.mdm"
-  branch: "develop"
+  branch: "feature/hello-world"
   user: trifenix
   email: devops@trifenix.io
-
   
 # github ejecuta este build, para validar y ejecutar,
 # es decir, dos veces
@@ -34,7 +34,18 @@ steps:
         Write-Host $setVersion
     displayName: generando variable version con TRIFENIX VERSIONS
 
-  # toma todos los proyectos que existan además de quien tiene el nuget.
+  # configuración sonarqube  
+  - task: SonarQubePrepare@4
+    inputs:
+      SonarQube: 'AGROFENIX-mdm'
+      scannerMode: 'MSBuild'
+      projectKey: 'AGROFENIX-mdm'
+      projectName: 'AGROFENIX-mdm'
+      projectVersion: '$(version)'      
+    displayName: preparación sonarqube
+  
+  
+  #toma todos los proyectos que existan además de quien tiene el nuget.
   - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
@@ -44,13 +55,14 @@ steps:
       versioningScheme: byBuildNumber
     displayName: restore dotnet
 
+  
   - task: CmdLine@2
     inputs:
       script: |
         dotnet pack $(name-project).csproj --configuration $(BuildConfiguration) /p:Version=$(version) --output $(Build.ArtifactStagingDirectory)
     displayName: dotnet pack
     
-  
+ 
   # publica paquete para publicar.
   - task: PublishBuildArtifacts@1
     inputs:
