@@ -31,6 +31,11 @@ steps:
         Write-Host $setVersion
     displayName: generando variable version con TRIFENIX VERSIONS
 
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo $(version)
+    displayName: mostrando variable en el set.
 
   # configuración sonarqube  
   - task: SonarQubePrepare@4
@@ -55,6 +60,11 @@ steps:
     displayName: restore dotnet
 
   
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo $(version)
+    displayName: mostrando variable en el set.
 
   - task: DotNetCoreCLI@2    
     inputs: 
