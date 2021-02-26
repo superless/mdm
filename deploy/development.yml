@@ -13,8 +13,7 @@ variables:
   branch: "develop"
   user: trifenix
   email: devops@trifenix.io
-
-  
+    
 # github ejecuta este build, para validar y ejecutar,
 # es decir, dos veces
 # esta instrucción asigna que no se ejecute en el pull request (para validar).
