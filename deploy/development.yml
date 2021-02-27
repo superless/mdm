@@ -33,6 +33,7 @@ steps:
         Write-Host $setVersion
     displayName: generando variable version con TRIFENIX VERSIONS
 
+
   # toma todos los proyectos que existan además de quien tiene el nuget.
   - task: DotNetCoreCLI@2
     inputs:
