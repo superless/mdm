@@ -21,6 +21,8 @@ variables:
 # esta instrucción asigna que no se ejecute en el pull request (para validar).
 # sino, que solo se ejecute al modificar la rama.
 pr: none
+
+
   
 steps:
 
