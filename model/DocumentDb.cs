@@ -32,7 +32,7 @@ namespace trifenix.model
         /// por nombre de la entidad o nombre de la clase.
         /// </summary>        
 
-        public string DocumentPartition =>GetType().Name
+        public string DocumentPartition => GetType().Name;
 
     }
 }
