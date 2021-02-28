@@ -20,6 +20,9 @@ variables:
 # sino, que solo se ejecute al modificar la rama.
 pr: none
  
+
+
+
 steps:
   # generamos versión del paquete.
   - task: PowerShell@2
