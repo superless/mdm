@@ -24,7 +24,7 @@ namespace trifenix.model
         /// <summary>
         /// Indicador de estado de la entidad.
         /// </summary>
-        public abstract bool Enable { get; set; }
+        public bool Enable { get; set; }
 
         /// <summary>
         /// Partición dentro de base dedatos documental,
