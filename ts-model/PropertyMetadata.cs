@@ -54,18 +54,10 @@ namespace trifenix.connect.mdm.ts_model
         public string TypeString { get; set; }
 
         /// <summary>
-        /// tipo de la propiedad.
-        /// </summary>
-        public Type Type { get; set; }
-
-        /// <summary>
         /// Índice del input
         /// </summary>
         public int Index { get; set; }
 
-        /// <summary>
-        /// Nombre del mismo campo en el modelo.
-        /// </summary>
-        public string ModelPropName { get; set; }
+        
     }
 }
