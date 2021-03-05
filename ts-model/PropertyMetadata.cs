@@ -1,4 +1,5 @@
 ﻿using System;
+using trifenix.connect.mdm.enums;
 
 namespace trifenix.connect.mdm.ts_model
 {
@@ -58,6 +59,18 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public int Index { get; set; }
 
-        
+        /// <summary>
+        /// Nombre de la clase a la que pertenece la propiedad.
+        /// </summary>
+        public string ClassName { get; set; }
+
+
+        /// <summary>
+        /// Retorna el índice del padre.
+        /// </summary>
+        public int IndexFather { get; set; }
+
+
+
     }
 }

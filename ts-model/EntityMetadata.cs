@@ -55,6 +55,11 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public string ClassName { get; set; }
 
+        /// <summary>
+        /// Determina si es readonly.
+        /// </summary>
+        public bool ReadOnly { get; set; }
+
 
         /// <summary>
         /// Nombre de la clase input.
@@ -65,7 +70,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Detalles de las propiedades bajo otra vista.
         /// </summary>
-        public string ModelDetails { get; set; }
+        public ModelDetails ModelDetails { get; set; }
 
         /// <summary>
         /// Inputs de la clase.
