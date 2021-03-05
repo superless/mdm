@@ -1,4 +1,6 @@
-﻿namespace trifenix.connect.mdm.ts_model
+﻿using System;
+
+namespace trifenix.connect.mdm.ts_model
 {
     /// <summary>
     /// Metadata de una propiedad.
@@ -26,6 +28,12 @@
         /// si lo es, solo puede existir solo una propiedad con ese nombre en la colección de entidades.
         /// </summary>
         public bool Unique { get; set; }
+
+        /// <summary>
+        /// Determina si es validado por referencia.
+        /// </summary>
+        public bool ReferenceValidation { get; set; }
+        
         /// <summary>
         /// Determina si la propiedad es visible en un formulario.
         /// </summary>
@@ -38,5 +46,26 @@
         /// Si la propiedad tiene una entrada (las clases de tipo entrada estan conectadas porl el ReferenceSearchHeader)
         /// </summary>
         public bool HasInput { get; set; }
+
+
+        /// <summary>
+        /// tipo de la propiedad en string.
+        /// </summary>
+        public string TypeString { get; set; }
+
+        /// <summary>
+        /// tipo de la propiedad.
+        /// </summary>
+        public Type Type { get; set; }
+
+        /// <summary>
+        /// Índice del input
+        /// </summary>
+        public int Index { get; set; }
+
+        /// <summary>
+        /// Nombre del mismo campo en el modelo.
+        /// </summary>
+        public string ModelPropName { get; set; }
     }
 }
