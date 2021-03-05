@@ -38,7 +38,6 @@ steps:
     displayName: generando variable version con TRIFENIX VERSIONS
 
 
-
   # configuración sonarqube  
   - task: SonarQubePrepare@4
     inputs:
