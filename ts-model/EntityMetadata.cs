@@ -152,8 +152,9 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Por cada enumeración de validación, se indican el  o los nombres de campos involucrados.
         /// las validaciones actuales solo usarían un nombre.
+        /// se cambia porque no es soportado por typegen
         /// </summary>
-        public Dictionary<Validation, string[][]> ValidationsGroup { get; set; }
+        public Dictionary<int, string[][]> ValidationsGroup { get; set; }
     }
 
     /// <summary>
