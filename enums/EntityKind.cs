@@ -15,6 +15,11 @@
         CUSTOM_ENTITY = 1,
 
         // si generación es más compleja, por tanto se debe evaluar.
-        PROCESS = 2
+        PROCESS = 2,
+
+        ENTITY_ONLY_READ = 3
     }
+
+
+    
 }
