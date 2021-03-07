@@ -10,10 +10,8 @@ namespace trifenix.connect.mdm.ts_model
         /// índice usado para ordenar los grupos de propiedades
         /// </summary>
         public int OrderIndex { get; set; }
-        /// <summary>
-        /// título del grupo, puede ser vacio.
-        /// </summary>
-        public string Title { get; set; }
+
+
         /// <summary>
         /// Tipo de Dispositivo
         /// </summary>
