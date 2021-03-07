@@ -23,5 +23,14 @@ namespace trifenix.connect.mdm_attributes
         /// y si es custom, se entenderá que puede no ser un proceso, pero debe ser construido manualmente.
         /// </summary>
         public EntityKind Kind { get; set; }
+
+
+        /// <summary>
+        /// Determina si es globalFilter
+        /// </summary>
+        public bool IsGlobalFilter { get; set; }
+
+
     }
+
 }
