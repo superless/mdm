@@ -44,7 +44,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Menú generado con la metadata.
         /// </summary>
-        public GroupMenu[] Menu { get; set; }
+        public GroupMenuViewer[] Menu { get; set; }
 
     }
 }
