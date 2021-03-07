@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using trifenix.connect.mdm.enums;
+using trifenix.connect.model;
 using trifenix.connect.ts_model.enums;
 
 namespace trifenix.connect.mdm.ts_model
@@ -111,79 +112,61 @@ namespace trifenix.connect.mdm.ts_model
         /// propiedades de tipo entidad.
         /// </summary>
         public Dictionary<int, RelatedPropertyMetadata> relData { get; set; }
-    }
 
-    public class ModelDetails {
-        // <summary>
-        /// Cada una de las propiedades
+        /// <summary>
+        /// Documentación de la clase.
         /// </summary>
-        public Dictionary<string, PropertyMetadata> PropsDetails { get; set; }
+        public EntitySearchDisplayInfo Info { get; set; }
 
 
         /// <summary>
-        /// Cada una de las propiedades de tipo related.
+        /// Estructura para eliminar elementos
         /// </summary>
-        public Dictionary<string, RelatedPropertyMetadata> InputRelatedDetails { get; set; }
-
-        /// <summary>
-        /// Recursividad con los campos de tipo objeto con sus propias propiedades
-        /// </summary>
-        public Dictionary<string, ModelDetails> RelatedInputs { get; set; }
-    }
-
-    public class InputDetails {
-
-        /// <summary>
-        /// Cada una de las propiedades
-        /// </summary>
-        public Dictionary<string, InputPropDetails> InputPropsDetails { get; set; }
+        public DeleteItem[] DeleteItems { get; set; }
 
 
         /// <summary>
-        /// Cada una de las propiedades de tipo related.
+        /// Determina si el elemento es el valor de un filtro global
+        /// 
         /// </summary>
-        public Dictionary<string, InputPropRelatedDetails> InputRelatedDetails { get; set; }
+        public bool IsGlobalFilterValue { get; set; }
+
 
         /// <summary>
-        /// Recursividad con los campos de tipo objeto con sus propias propiedades
+        /// Ruta a cualquier entidad, generalmente se indicarán aquellas que se quiera que este 
+        /// sea filtro.
         /// </summary>
-        public Dictionary<string, InputDetails> RelatedInputs { get; set; }
+        public ToProcessClass[] ToProcessClass { get; set; }
+
 
         /// <summary>
-        /// Por cada enumeración de validación, se indican el  o los nombres de campos involucrados.
-        /// las validaciones actuales solo usarían un nombre.
-        /// se cambia porque no es soportado por typegen
+        /// Determina los filtros disponibles, de acuerdo al atributo ToGlobalFilterProcess
         /// </summary>
-        public Dictionary<int, string[][]> ValidationsGroup { get; set; }
+        public RelatedItem[] FiltersAvailable { get; set; }
+
     }
 
     /// <summary>
-    /// Detalles de una propiedad que no sea related.
+    /// Indica una entidad relacionada
+    /// con la estructura para llegar a una entidad en particular
     /// </summary>
-    public class InputPropDetails : PropertyMetadata {
+    public class RelatedItem {
 
-       
         /// <summary>
-        /// Nombre del mismo campo en el modelo.
+        /// Nombre de la clase de la entidad disponible como filtro de otra entidad
         /// </summary>
-        public string ModelPropName { get; set; }
+        public string ClassName { get; set; }
+
+        /// <summary>
+        /// el índice de la clase de la entidad disponible como filtro de otra entidad
+        /// </summary>
+        public int Index { get; set; }
+
+
+        /// <summary>
+        /// Ruta para llegar a la entidad desde esta.
+        /// </summary>
+        public ToProcessClass PathToEntity { get; set; }
+
     }
-
-    /// <summary>
-    /// Detalles de una propiedad related
-    /// </summary>
-    public class InputPropRelatedDetails : RelatedPropertyMetadata
-    {  
-        /// <summary>
-        /// Nombre del mismo campo en el modelo.
-        /// </summary>
-        public string ModelPropName { get; set; }
-
-        /// <summary>
-        /// Declara si el input es de referencia o contiene los valores de ingreso.
-        /// </summary>
-        public bool IsReference { get; set; }
-    }
-
-
 }
