@@ -11,14 +11,20 @@ namespace trifenix.connect.mdm_attributes
     public class GroupAttribute : Attribute
     {
         public GroupInput Group { get; }
-        public GroupAttribute(int orderIndex = 0, PhisicalDevice device = PhisicalDevice.WEB, int proportion = 12, string title = null)
+
+        /// <summary>
+        /// Determina la estructura de menu
+        /// </summary>
+        /// <param name="orderIndex"></param>
+        /// <param name="device"></param>
+        public GroupAttribute(int orderIndex = 0, PhisicalDevice device = PhisicalDevice.WEB)
         {
             Group = new GroupInput
             {
                 OrderIndex = orderIndex,
-                Title = !string.IsNullOrWhiteSpace(title) ? title : string.Empty,
+               
                 Device = device,
-                ColumnProportion = proportion
+                
             };
         }
     }
