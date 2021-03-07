@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace trifenix.model
+namespace trifenix.connect.model
 {
     /// <summary>
     /// Documentos de la Base de datos
