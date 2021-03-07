@@ -9,7 +9,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// índice que corresponde al menú.
         /// </summary>
-        public int MenuIndex { get; set; }
+        public string MenuIndex { get; set; }
         /// <summary>
         /// Tipo de dispositivo donde se aplicaría el menú.
         /// </summary>
@@ -17,6 +17,11 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// índice que identifica un submenú.
         /// </summary>
-        public int SubMenuIndex { get; set; }
+        public string SubMenuIndex { get; set; }
+
+        /// <summary>
+        /// Un nombre para agrupar un menú, puede existir más de uno.
+        /// </summary>
+        public string Name { get; set; }
     }
 }
