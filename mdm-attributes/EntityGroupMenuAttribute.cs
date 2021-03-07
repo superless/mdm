@@ -11,7 +11,14 @@ namespace trifenix.connect.mdm_attributes
     public class EntityGroupMenuAttribute : Attribute {
 
 
-        public EntityGroupMenuAttribute(int menuId, PhisicalDevice device, int submenu )
+
+        /// <summary>
+        /// Atributo para crear menús
+        /// </summary>
+        /// <param name="menuId">nombre del menú principal</param>
+        /// <param name="device">dispositivo de renderización</param>
+        /// <param name="submenu">nombre del submenú, si tiene</param>
+        public EntityGroupMenuAttribute(string menuId, PhisicalDevice device, string submenu )
         {
             Grupo = new GroupMenu
             {
