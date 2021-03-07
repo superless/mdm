@@ -16,6 +16,6 @@ namespace trifenix.connect.mdm.ts_model
         /// Tipo de Dispositivo
         /// </summary>
         public PhisicalDevice Device { get; set; }
-        
 
+    }
 }
