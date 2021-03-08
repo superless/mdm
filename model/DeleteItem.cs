@@ -11,12 +11,13 @@ namespace trifenix.connect.model
         /// <summary>
         /// Tipo de documento(Barrack, order, etc)
         /// </summary>
-        public Type DocumentType { get; set; }
+        public string DocumentType { get; set; }
 
         /// <summary>
         /// Propiedades de un documento
         /// </summary>
         public string Property { get; set; }
     }
+
 
 }
