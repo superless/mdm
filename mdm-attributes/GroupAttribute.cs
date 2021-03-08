@@ -10,19 +10,23 @@ namespace trifenix.connect.mdm_attributes
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public class GroupAttribute : Attribute
     {
+        /// <summary>
+        /// Valores de menú
+        /// </summary>
         public GroupInput Group { get; }
 
         /// <summary>
         /// Determina la estructura de menu
         /// </summary>
-        /// <param name="orderIndex"></param>
+        /// <param name="menu">Nombre del menú</param>
         /// <param name="device"></param>
-        public GroupAttribute(int orderIndex = 0, PhisicalDevice device = PhisicalDevice.WEB)
+        /// <param name="subMenu">Nombre del submenú</param>
+        public GroupAttribute(string menu, PhisicalDevice device = PhisicalDevice.WEB, string subMenu = "")
         {
             Group = new GroupInput
             {
-                OrderIndex = orderIndex,
-               
+                Menu = menu,
+                SubMenu = subMenu,
                 Device = device,
                 
             };

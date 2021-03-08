@@ -6,10 +6,16 @@ namespace trifenix.connect.mdm.ts_model
     /// </summary>
     public class GroupInput
     {
+
         /// <summary>
-        /// índice usado para ordenar los grupos de propiedades
+        /// Nombre del menú al que representa
         /// </summary>
-        public int OrderIndex { get; set; }
+        public string Menu { get; set; }
+
+        /// <summary>
+        /// SI es nulo, solo tendría un menú.
+        /// </summary>
+        public string SubMenu { get; set; }
 
 
         /// <summary>
