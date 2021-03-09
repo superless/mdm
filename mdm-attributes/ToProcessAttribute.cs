@@ -5,7 +5,7 @@ namespace trifenix.connect.mdm_attributes
     /// <summary>
     /// Determina si una propiedad es usada para llegar a un proceso principal
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, AllowMultiple = true)]
     public class ToProcessAttribute : Attribute
     {
         /// <summary>
