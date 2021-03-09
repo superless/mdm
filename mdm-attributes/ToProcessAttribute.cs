@@ -25,11 +25,13 @@ namespace trifenix.connect.mdm_attributes
         /// <param name="name">Nombre de la ruta, se usa como identificador de la ruta</param>
         /// <param name="type">Tipo de procesos (Barrack, por ej.)</param>
         /// <param name="jump">Determina si es el inicio de la ruta (true) o es un camino para llegar a ella (false)</param>
-        public ToProcessAttribute(string name, Type[] type, bool jump)
+        /// <param name="isGlobalFilter">Determina si el proceso es global filter</param>
+        public ToProcessAttribute(string name, Type[] type, bool jump, bool isGlobalFilter)
         {
             Name = name;
             Type = type;
             Jump = jump;
+            IsGlobalFilter = isGlobalFilter;
         }
 
         /// <summary>
@@ -51,5 +53,6 @@ namespace trifenix.connect.mdm_attributes
         /// no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
         /// </summary>
         public bool Jump { get; }
+        public bool IsGlobalFilter { get; }
     }
 }
