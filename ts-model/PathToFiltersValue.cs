@@ -19,8 +19,7 @@
         public string OriginalClassName { get; set; }
 
         /// <summary>
-        /// nombre de la propiedad, por ejemplo para llegar al valor de season desde costcenter
-        /// debe usar IdSeason.
+        /// 
         /// </summary>
         public string IdProperty { get; set; }
 
@@ -34,9 +33,6 @@
         /// índice del elemento a conseguir el valor.
         /// </summary>
         public int OriginalIndex { get; set; }
-
-
-
 
 
     }
