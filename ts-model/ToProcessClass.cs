@@ -21,5 +21,10 @@
         /// índice de la clase, para usarlo en la consulta.
         /// </summary>
         public int IndexProcessClass { get; set; }
+
+        /// <summary>
+        /// Nombre del filtro o ruta del filtro.
+        /// </summary>
+        public string Name { get; set; }
     }
 }
