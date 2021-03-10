@@ -16,7 +16,7 @@
         /// <summary>
         /// el nombre de la clase que está solicitando el valor.
         /// </summary>
-        public string originClass { get; set; }
+        public string OriginClass { get; set; }
 
         /// <summary>
         /// Identificador de la propiedad de 
