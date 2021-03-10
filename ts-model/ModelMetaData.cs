@@ -28,7 +28,7 @@ namespace trifenix.connect.mdm.ts_model
         /// Estructura de Filtros globales, indicando de que manera
         /// llegar a el proceso principal del filtro (Barracks).
         /// </summary>
-        public  GlobalFilters GlobalFilters { get; set; }
+        public  GlobalFilters[] GlobalFilters { get; set; }
 
         /// <summary>
         /// Descripciones de enumeraciones útiles.
