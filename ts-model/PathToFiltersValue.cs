@@ -21,7 +21,7 @@
         /// <summary>
         /// Identificador de la propiedad de 
         /// </summary>
-        public string IdProperty { get; set; }
+        public string PropertyName { get; set; }
 
         /// <summary>
         /// índice de la clase a consultar, esto permite poder hacer consultas de tipo Search.
