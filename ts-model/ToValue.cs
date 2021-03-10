@@ -13,24 +13,24 @@
         /// <summary>
         /// Clase a llegar, ej : Barrack
         /// </summary>
-        public string ProcessNameClass { get; set; }
+        public string ValueClass { get; set; }
 
 
         /// <summary>
         /// índice de la clase, para usarlo en la consulta.
         /// </summary>
-        public int IndexProcessClass { get; set; }
+        public int ValueIndex { get; set; }
 
         /// <summary>
         /// nombre de la clase original o ruta del filtro.
         /// </summary>
-        public string origin { get; set; }
+        public string OriginClass { get; set; }
 
 
         /// <summary>
         /// Índice del elemento original
         /// </summary>
-        public int IndexOrigin { get; set; }
+        public int OriginIndex { get; set; }
 
     }
 }
