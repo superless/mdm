@@ -24,13 +24,12 @@ namespace trifenix.connect.mdm_attributes
         /// </summary>
         /// <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
         /// <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
-        /// <param name="jump">Determina si es el inicio de la ruta (true) o es un camino para llegar a ella (false)</param>
         /// <param name="isGlobalFilter">Determina si el proceso es global filter</param>
-        public ToProcessAttribute(Type sourceType, Type targeType, bool jump, bool isGlobalFilter)
+        public ToProcessAttribute(Type sourceType, Type targeType, bool isGlobalFilter)
         {
             SourceType = sourceType;
             TargetType = targeType;
-            Jump = jump;
+            
             IsGlobalFilter = isGlobalFilter;
         }
 
@@ -47,13 +46,7 @@ namespace trifenix.connect.mdm_attributes
         /// </summary>
         public Type SourceType { get; }
 
-        /// <summary>
-        /// Salto
-        /// si es verdadero, significa que la propiedad o clase que representa una entidad, 
-        /// no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
-        /// </summary>
-        public bool Jump { get; }
-
+        
         /// <summary>
         /// Determina si es parte de un filtro global.
         /// </summary>
