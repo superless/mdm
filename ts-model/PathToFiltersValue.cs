@@ -11,15 +11,15 @@
         /// <summary>
         /// el nombre de la clase para el valor
         /// </summary>
-        public string ClassName { get; set; }
+        public string TargetClass { get; set; }
 
         /// <summary>
         /// el nombre de la clase que está solicitando el valor.
         /// </summary>
-        public string OriginalClassName { get; set; }
+        public string originClass { get; set; }
 
         /// <summary>
-        /// 
+        /// Identificador de la propiedad de 
         /// </summary>
         public string IdProperty { get; set; }
 
@@ -27,12 +27,12 @@
         /// índice de la clase a consultar, esto permite poder hacer consultas de tipo Search.
         /// por ejemplo, filter = index eq {RealIndex} and rel/index == {OriginalIndex} and rel/id = {cost-center-id}
         /// </summary>
-        public int RealIndex { get; set; }
+        public int OriginIndex { get; set; }
 
         /// <summary>
         /// índice del elemento a conseguir el valor.
         /// </summary>
-        public int OriginalIndex { get; set; }
+        public int TargetIndex { get; set; }
 
 
     }
