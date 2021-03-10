@@ -22,14 +22,14 @@ namespace trifenix.connect.mdm_attributes
         /// Si el atributo estuviera en la propiedad sería más fácil
         /// porque con los datos de la propiedad se podrá saber cual es el próximo paso.
         /// </summary>
-        /// <param name="name">Nombre de la ruta, se usa como identificador de la ruta</param>
-        /// <param name="type">Tipo de procesos (Barrack, por ej.)</param>
+        /// <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
+        /// <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
         /// <param name="jump">Determina si es el inicio de la ruta (true) o es un camino para llegar a ella (false)</param>
         /// <param name="isGlobalFilter">Determina si el proceso es global filter</param>
-        public ToProcessAttribute(string name, Type type, bool jump, bool isGlobalFilter)
+        public ToProcessAttribute(Type sourceType, Type targeType, bool jump, bool isGlobalFilter)
         {
-            Name = name;
-            Type = type;
+            SourceType = sourceType;
+            TargetType = targeType;
             Jump = jump;
             IsGlobalFilter = isGlobalFilter;
         }
@@ -37,7 +37,7 @@ namespace trifenix.connect.mdm_attributes
         /// <summary>
         /// Obtiene el tipo del proceso (Barrack)
         /// </summary>
-        public Type Type { get; }
+        public Type TargetType { get; }
 
         /// <summary>
         /// Nombre del Salto
@@ -45,7 +45,7 @@ namespace trifenix.connect.mdm_attributes
         /// Cada clase que no sea parte del filtro, pero si parte del camino del filtro para llegar al 
         /// valor, usarán el mismo nombre.
         /// </summary>
-        public string Name { get; }
+        public Type SourceType { get; }
 
         /// <summary>
         /// Salto
@@ -53,6 +53,10 @@ namespace trifenix.connect.mdm_attributes
         /// no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
         /// </summary>
         public bool Jump { get; }
+
+        /// <summary>
+        /// Determina si es parte de un filtro global.
+        /// </summary>
         public bool IsGlobalFilter { get; }
     }
 }

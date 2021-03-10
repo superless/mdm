@@ -14,16 +14,21 @@ namespace trifenix.connect.mdm_attributes
         /// Determina a que tipo de elemento pertenece el valor.
         /// Si una clase que es de tipo filtro no tiene GlobalFilterValue, usará el mismo valor.
         /// </summary>
-        /// <param name="name">Nombre del filtro</param>
-        /// <param name="type">Tipo del elemento a obtener</param>
+        /// <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
+        /// <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
         /// <param name="jump">Si es jump, solo es para obtener el camino</param>
-        public ToGlobalFilterValueAttribute(string name, Type type, bool jump)
+        public ToGlobalFilterValueAttribute(Type sourceType, Type targeType, bool jump)
         {
-            Name = name;
-            Type = type;
+            SourceType = sourceType;
+            TargetType = targeType;
             Jump = jump;
         }
 
+
+        /// <summary>
+        /// Obtiene el tipo del proceso (Barrack)
+        /// </summary>
+        public Type TargetType { get; }
 
         /// <summary>
         /// Nombre del Salto
@@ -31,14 +36,7 @@ namespace trifenix.connect.mdm_attributes
         /// Cada clase que no sea parte del filtro, pero si parte del camino del filtro para llegar al 
         /// valor, usarán el mismo nombre.
         /// </summary>
-        public string Name { get; }
-
-
-        /// <summary>
-        /// Tipo al que tiene que llegar, para trazar la ruta, a través de este mismo atributo
-        /// </summary>
-        public Type Type { get; }
-
+        public Type SourceType { get; }
 
         /// <summary>
         /// Salto
