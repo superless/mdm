@@ -22,9 +22,15 @@
         public int IndexProcessClass { get; set; }
 
         /// <summary>
-        /// Nombre del filtro o ruta del filtro.
+        /// nombre de la clase original o ruta del filtro.
         /// </summary>
-        public string Name { get; set; }
+        public string origin { get; set; }
+
+
+        /// <summary>
+        /// Índice del elemento original
+        /// </summary>
+        public int IndexOrigin { get; set; }
 
     }
 }
