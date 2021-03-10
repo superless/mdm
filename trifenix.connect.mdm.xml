@@ -470,6 +470,172 @@
             <param name="index">índice de la entidad</param>
             <returns>Información de la entidad (título, descripción, nombre corto y columna )</returns>
         </member>
+        <member name="T:trifenix.connect.mdm.ts_model.EntityMetadata">
+            <summary>
+            Metadata de una entidad o clase.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Title">
+            <summary>
+            Nombre de la entidad a mostrar
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ShortName">
+            <summary>
+            Nombre Corto de la entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Description">
+            <summary>
+            Descripción de la entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Index">
+            <summary>
+            Índice de la entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Visible">
+            <summary>
+            Determina si la clase es visible
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Menus">
+            <summary>
+            Menú del elemento
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.EntityKind">
+            <summary>
+            Tipo de entidad, si es de tipo entity, se podría indicar que es común,
+            por tanto puede ser generada automáticamente.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.PathName">
+            <summary>
+            cadena de texto para la ruta de la entidad,
+            esto puede ser usado para el react router
+            o las rutas de la api.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.AutoNumeric">
+            <summary>
+            Autonumérico
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ClassName">
+            <summary>
+            Nombre de la clase
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ReadOnly">
+            <summary>
+            Determina si es readonly.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ClassInputName">
+            <summary>
+            Nombre de la clase input.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ModelDetails">
+            <summary>
+            Detalles de las propiedades bajo otra vista.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.InputDetails">
+            <summary>
+            Inputs de la clase.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.StringData">
+            <summary>
+            Metadata de las propiedades de tipo string
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.NumData">
+            <summary>
+            Metadata de las propiedades de tipo número.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.DoubleData">
+            <summary>
+            Metadata de las propiedades de tipo double.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.BoolData">
+            <summary>
+            Metada de las propiedades de tipo boolean
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.GeoData">
+            <summary>
+            Metadata de las propiedades de tipo geo.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.DateData">
+            <summary>
+            Metadata de las propiedades de tipo fecha.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.EnumData">
+            <summary>
+            propiedades de tipo enumeración.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.relData">
+            <summary>
+            propiedades de tipo entidad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.Info">
+            <summary>
+            Documentación de la clase.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.DeleteItems">
+            <summary>
+            Estructura para eliminar elementos
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.IsGlobalFilterValue">
+            <summary>
+            Determina si el elemento es el valor de un filtro global
+            
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.ToProcessClass">
+            <summary>
+            Ruta a cualquier entidad, generalmente se indicarán aquellas que se quiera que este 
+            sea filtro.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.FiltersAvailable">
+            <summary>
+            Determina los filtros disponibles, de acuerdo al atributo ToGlobalFilterProcess
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.RelatedItem">
+            <summary>
+            Indica una entidad relacionada
+            con la estructura para llegar a una entidad en particular
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.RelatedItem.ClassName">
+            <summary>
+            Nombre de la clase de la entidad disponible como filtro de otra entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.RelatedItem.Index">
+            <summary>
+            el índice de la clase de la entidad disponible como filtro de otra entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.RelatedItem.PathToEntity">
+            <summary>
+            Ruta para llegar a la entidad desde esta.
+            </summary>
+        </member>
         <member name="T:trifenix.connect.mdm.ts_model.EntitySearchDisplayInfo">
             <summary>
             Descripción de una propiedad.
@@ -500,30 +666,202 @@
             PlaceHolder
             </summary>
         </member>
+        <member name="T:trifenix.connect.mdm.ts_model.EnumDescription">
+            <summary>
+            Descripción de enumeración
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EnumDescription.Name">
+            <summary>
+            Nombre de la enumeración
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EnumDescription.Descriptions">
+            <summary>
+            Descripciones de cada item de una enumeración.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.FilterBase`1">
+            <summary>
+            Filtro para cada tipo de valor.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterBase`1.FilterType">
+            <summary>
+            Tipo de filtro
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterBase`1.Value">
+            <summary>
+            valor a filtrar
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.FilterGlobalEntityInput">
+            <summary>
+            Filtro global seleccionado, contenedor de filtro global, en una aplicación antes de hacer consultas se preguntará por los filtros globales.
+            un filtro global tendrá un índice principal que será el tipo de entidad que será filtrada.
+            por tanto, en el cliente debería existir una selección, que consultará por todos los elementos del tipo de entidad.
+            los resultados seleccionados serán guardados en EntitiesSelected.
+            Se pueden definir también filtros que dependan del filtro padre.
+            esto significa que el resultado seleccionado, servirá para filtrar los filtros hijos.
+            por ejemplo:
+            en el caso de un programa agricola existirá el filtro de centro de costos, el que determinará la empresa con la que operará el programa
+            no todas las entidades tendrán directamente el centro de costos como relación, existirán algunas que dependerán de otra entidad para hacer la conexión.
+            un filtro global debe considerar el centro de costos y todas las entidades que permitan filtrar todos los elementos del sitio a partir de esta selección.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterGlobalEntityInput.indexMain">
+            <summary>
+            Indice de una entidad a filtrar
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterGlobalEntityInput.EntitiesSelected">
+            <summary>
+            Identificador de los elementos seleccionados si es el padre y los ids que dependen del filtro principal para el hijo.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterGlobalEntityInput.FilterChilds">
+            <summary>
+            Filtro global Recursivo, si existen propiedades que dependan
+            del filtro principal, por ejemplo si un filtro global fuera el año agricola,
+            no todas las consultas tendran acceso a la entidad season directamente.
+            por tanto puede incluir en este contenedor, todos los filtros que dependan del principal.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.FilterModel">
+            <summary>
+            Colección de filtros que aplican a una consulta
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.FilterStr">
+            <summary>
+            Filtro de tipo string
+            grupo de filtros agrupados por indice de cada propiedad a filtrar.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.FilterEntity">
+            <summary>
+            filtro de tipo entidad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.EnumFilter">
+            <summary>
+            fitro de tipo enumeración.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.LongFilter">
+            <summary>
+            filtro de tipo long.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.NumFilter">
+            <summary>
+            filtro de tipo número.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.BoolFilters">
+            <summary>
+            filtro de tipo bool
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.DateFilters">
+            <summary>
+            filtro de tipo date
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterModel.DoubleFilters">
+            <summary>
+            filtro de tipo double.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.GeoPointTs">
+            <summary>
+            Tipo de dato para geolocalización que será usado en el cliente.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GeoPointTs.latitude">
+            <summary>
+            latitud
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GeoPointTs.longitude">
+            <summary>
+            longitud
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.GeographyProperty">
+            <summary>
+            Clase de tipo geo, que será generada como componente typescript
+            para identificar un campo de tipo geo.
+            También se usa para test
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GeographyProperty.index">
+            <summary>
+            índice de la propiedad de tipo geo
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GeographyProperty.value">
+            <summary>
+            valor de la propiedad de tipo geo.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.GlobalFilters">
+            <summary>
+            Global filter, Determina toda la información necesaria para hacer el filtro superior.
+            o un filtro global.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GlobalFilters.ToValue">
+            <summary>
+            Colección de filtros y como llegan al valor que necesitan. por ejemplo, cost-center necesita el valor idSeason.
+            el key sería el cost-center
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GlobalFilters.ToProcess">
+            <summary>
+            Determina la ruta para llegar a las distintas entidades.
+            
+            Por ejemplo:
+            1. Cost-Center
+            a. Obtiene el valor que corresponde al filtro, seleccionando un cost-center debe retornar el id del seasonId.
+            b. Como sabemos que el proceso es el barrack, solo necesitamos usar el idSeason en el barrack.
+            2. Especie
+            a. La especie se relaciona directo con el barrack, por tanto no sería necesario el ToValue, simplemente
+            indicar el idSpecie para el barrack.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GlobalFilters.EntityForGlobalFilters">
+            <summary>
+            Entidad en la que todos los filtros se unen
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GlobalFilters.IndexEntityForGlobalFilters">
+            <summary>
+            índice de la entidad donde los filtros se unen.
+            cuando se unen los filtros, significa que en vez de usar los filtros
+            se usan los del resultado de los filtros aplicados a una tabla.
+            </summary>
+        </member>
         <member name="T:trifenix.connect.mdm.ts_model.GroupInput">
             <summary>
             Agrupación de propiedades, usadas en el cliente
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.GroupInput.OrderIndex">
+        <member name="P:trifenix.connect.mdm.ts_model.GroupInput.Menu">
             <summary>
-            índice usado para ordenar los grupos de propiedades
+            Nombre del menú al que representa
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.GroupInput.Title">
+        <member name="P:trifenix.connect.mdm.ts_model.GroupInput.SubMenu">
             <summary>
-            título del grupo, puede ser vacio.
+            SI es nulo, solo tendría un menú.
             </summary>
         </member>
         <member name="P:trifenix.connect.mdm.ts_model.GroupInput.Device">
             <summary>
             Tipo de Dispositivo
-            </summary>
-        </member>
-        <member name="P:trifenix.connect.mdm.ts_model.GroupInput.ColumnProportion">
-            <summary>
-            Proporción de columna, usada para determinar su posición.
-            se usa en base 12, es decir 12 es el ancho total.
             </summary>
         </member>
         <member name="T:trifenix.connect.mdm.ts_model.GroupMenu">
@@ -547,6 +885,530 @@
             índice que identifica un submenú.
             </summary>
         </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenu.Name">
+            <summary>
+            Un nombre para agrupar un menú, puede existir más de uno.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.GroupMenuItem">
+            <summary>
+            Determina el valor de un item de menú.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuItem.PathName">
+            <summary>
+            Ruta del link del menú.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuItem.Name">
+            <summary>
+            Nombre del grupo menu item, en este caso sería el nombre de la clase, en la documentación.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuItem.ShortName">
+            <summary>
+            Nombre Corto del grupo menu item, en este caso sería el nombre de la clase, en la documentación.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.GroupMenuViewer">
+            <summary>
+            Representa un item de menú y sus links.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuViewer.Name">
+            <summary>
+            Nombre del menú raíz.
+            ej: mantenedores.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuViewer.Items">
+            <summary>
+            Colección de items de menú.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.GroupMenuViewer.GroupMenu">
+            <summary>
+            Sub Menús.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.InputDetails">
+            <summary>
+            Detalles de cada input.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputDetails.InputPropsDetails">
+            <summary>
+            Cada una de las propiedades
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputDetails.InputRelatedDetails">
+            <summary>
+            Cada una de las propiedades de tipo related.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputDetails.RelatedInputs">
+            <summary>
+            Recursividad con los campos de tipo objeto con sus propias propiedades
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputDetails.ValidationsGroup">
+            <summary>
+            Por cada enumeración de validación, se indican el  o los nombres de campos involucrados.
+            las validaciones actuales solo usarían un nombre.
+            se cambia porque no es soportado por typegen
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.InputPropDetails">
+            <summary>
+            Detalles de una propiedad que no sea related.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputPropDetails.ModelPropName">
+            <summary>
+            Nombre del mismo campo en el modelo.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.InputPropRelatedDetails">
+            <summary>
+            Detalles de una propiedad related
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputPropRelatedDetails.ModelPropName">
+            <summary>
+            Nombre del mismo campo en el modelo.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.InputPropRelatedDetails.IsReference">
+            <summary>
+            Declara si el input es de referencia o contiene los valores de ingreso.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.ItemEnumDescription">
+            <summary>
+            descripción de un item de enumeración.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ItemEnumDescription.Index">
+            <summary>
+            índice de una enumeración
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ItemEnumDescription.Description">
+            <summary>
+            Descripción de una enumeración, encontrado en el parámetro Description o el nombre del item de la enumeración.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.MainDocumentation">
+            <summary>
+            Documentación principal
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Strs">
+            <summary>
+            Documentación de Strings
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Nums">
+            <summary>
+            Documentación de Nums
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Geos">
+            <summary>
+            Documentación de Geos
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Dates">
+            <summary>
+            Documentación de Fechas
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Bools">
+            <summary>
+            Documentación de booleanos
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Enums">
+            <summary>
+            Documentación de Enums
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.MainDocumentation.Rels">
+            <summary>
+            Documentación de Entidades
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.ModelDetails">
+            <summary>
+            otra vista de las propiedades
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:trifenix.connect.mdm.ts_model.ModelDetails.PropsDetails" -->
+        <member name="P:trifenix.connect.mdm.ts_model.ModelDetails.RelatedDetails">
+            <summary>
+            Cada una de las propiedades de tipo related.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelDetails.RelatedInputs">
+            <summary>
+            Recursividad con los campos de tipo objeto con sus propias propiedades
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.ModelMetaData">
+            <summary>
+            Metadata completo del modelo.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.Version">
+            <summary>
+            Versión de la metadata.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.VersionStructure">
+            <summary>
+            Información detallada de la historia de versiones.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.Indexes">
+            <summary>
+            Coleccion de metadata de cada entidad del modelo
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.GlobalFilters">
+            <summary>
+            Estructura de Filtros globales, indicando de que manera
+            llegar a el proceso principal del filtro (Barracks).
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.EnumDescriptions">
+            <summary>
+            Descripciones de enumeraciones útiles.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.MainDocumentation">
+            <summary>
+            Documentación principal, repositorio de documentación de cada índice
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.Menu">
+            <summary>
+            Menú generado con la metadata.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.OrderItem">
+            <summary>
+            Item de Ordernamiento, permite ordenar una consulta.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.OrderItem.Desc">
+            <summary>
+            Ascendente o descendente.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.OrderItem.KindProperty">
+            <summary>
+            Tipo de propiedad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.OrderItem.PropertyIndex">
+            <summary>
+            Indice de la propiedad
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.PathToFiltersValue">
+            <summary>
+            ruta para llegar al próximo valor para el filtro
+            por ejemplo, este puede ser centro de costos,
+            para llegar al filtro debe llegar a las tablas de procesos principales.
+            Por cada filtro se debe llegar a una colección de órdenes, pre-ordenes, ejecuciones, etc.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.ClassName">
+            <summary>
+            el nombre de la clase para el valor
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginalClassName">
+            <summary>
+            el nombre de la clase que está solicitando el valor.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.IdProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.RealIndex">
+            <summary>
+            índice de la clase a consultar, esto permite poder hacer consultas de tipo Search.
+            por ejemplo, filter = index eq {RealIndex} and rel/index == {OriginalIndex} and rel/id = {cost-center-id}
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginalIndex">
+            <summary>
+            índice del elemento a conseguir el valor.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.PropertyMetadadataEnum">
+            <summary>
+            Metadata de una propiedad de tipo enumeración,
+            esta hereda de la metadata de las otras entidades.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadadataEnum.EnumData">
+            <summary>
+            Descripción de cada valor del metadata.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.PropertyMetadata">
+            <summary>
+            Metadata de una propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.NameProp">
+            <summary>
+            Nombre de la propiedad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.isArray">
+            <summary>
+            determina si es o no un array.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.Info">
+            <summary>
+            Metadata para ser usada por el html.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.Required">
+            <summary>
+            Determina si la propiedad es requerida.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.Unique">
+            <summary>
+            Determina si la propiedad es única,
+            si lo es, solo puede existir solo una propiedad con ese nombre en la colección de entidades.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.ReferenceValidation">
+            <summary>
+            Determina si es validado por referencia.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.Visible">
+            <summary>
+            Determina si la propiedad es visible en un formulario.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.AutoNumeric">
+            <summary>
+            Determina si la propiedad es autonumeríca.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.HasInput">
+            <summary>
+            Si la propiedad tiene una entrada (las clases de tipo entrada estan conectadas porl el ReferenceSearchHeader)
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.TypeString">
+            <summary>
+            tipo de la propiedad en string.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.Index">
+            <summary>
+            Índice del input
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.ClassName">
+            <summary>
+            Nombre de la clase a la que pertenece la propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertyMetadata.IndexFather">
+            <summary>
+            Retorna el índice del padre.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.PropertySearchInfo">
+            <summary>
+            Información de una propiedad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Index">
+            <summary>
+            Índice de la propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Related">
+            <summary>
+            tipo de propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.RelatedEntity">
+            <summary>
+            tipo de propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Name">
+            <summary>
+            Nombre de la propiedad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.IndexClass">
+            <summary>
+            índice de la clase a la que pertenece la propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Enums">
+            <summary>
+            Valores de una enumeración, el número y la descripción.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.IsEnumerable">
+            <summary>
+            índica si es un enumerable o no.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.IsRequired">
+            <summary>
+            Es requerido.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.IsUnique">
+            <summary>
+            Es único.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Info">
+            <summary>
+            descripción de la propiedad
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Visible">
+            <summary>
+            Si la propiedad es visible.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.AutoNumeric">
+            <summary>
+            Si es un autonumérico.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.HasInput">
+            <summary>
+            Determina si tiene entrada (Existe una clase con esa propiedad en el namespace de entradas).
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.MaxLength">
+            <summary>
+            Ancho máximo de la propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.MinLength">
+            <summary>
+            Ancho Mínimo de la propiedad.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.Group">
+            <summary>
+            Grupo al que pertenece.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.PropertySearchInfo.RealIndex">
+            <summary>
+            índice real de una entidad obtenida desde la metadata.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.props.DblProperty">
+            <summary>
+            implementación para typegen.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.RelatedPropertyMetadata">
+            <summary>
+            Metadata de propiedades de tipo relación.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.RelatedPropertyMetadata.RealIndex">
+            <summary>
+            índice real de una entidad,
+            existe el caso en el que una clase puede tener dos propiedades que apuntan a la misma entidad. 
+            Por ejemplo el caso de barrack, tiene variedad en dos propiedades, pollinator y variety.
+            Esto afecto el modelo entitySearch, dado que una colección de relaciones de entitySearch
+            es un array con el índice de la propiedad y el valor. este índice identifica el tipo de entidad,
+            pero cuando existen dos propiedades que apuntan a la misma entidad, no es posible identificarlos,
+            salvo por la metadata.
+            En este caso RealIndex le dice que asignaremos a pollinator el 23, pero realmente es el 21.
+            Esto permite que el array de propiedades de relaciones de una relación, considere ambos, 
+            pero a la hora de seleccionar el valor que corresponde a pollinator (23) debe 
+            usar el tipo de entidad 21 (variedad)
+            Este valor índica a través de la metadata de esta excepción.
+            Este valor es nullable, debido a que es un comportamiento excepcional
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.ToProcessClass">
+            <summary>
+            Determina la ruta de filtros para el proceso que da origin a todos los filtros.
+            En este caso, al ser barrack el corazón, usará esta clase para determinar la ruta.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.PathToProcess">
+            <summary>
+            Determina la ruta para llegar a la entidad de proceso principal (ej. barrack).
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.ProcessNameClass">
+            <summary>
+            Clase a llegar, ej : Barrack
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.IndexProcessClass">
+            <summary>
+            índice de la clase, para usarlo en la consulta.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.origin">
+            <summary>
+            nombre de la clase original o ruta del filtro.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.IndexOrigin">
+            <summary>
+            Índice del elemento original
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.ToValue">
+            <summary>
+            Ruta para llegar al valor, por ejemplo, desde cost-center a idSeason.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.FiltersToValue">
+            <summary>
+            Ruta para llegar al valor de un filtro.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.ProcessNameClass">
+            <summary>
+            Clase a llegar, ej : Barrack
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.IndexProcessClass">
+            <summary>
+            índice de la clase, para usarlo en la consulta.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.origin">
+            <summary>
+            nombre de la clase original o ruta del filtro.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.IndexOrigin">
+            <summary>
+            Índice del elemento original
+            </summary>
+        </member>
         <member name="T:trifenix.connect.mdm.validation_attributes.ReferenceAttribute">
             <summary>
             Atributo que declara una referencia
@@ -566,6 +1428,13 @@
             </summary>
             <param name="_entityOfReference">Entidad de la Referencia</param>
         </member>
+        <member name="T:trifenix.connect.mdm.validation_attributes.UniqueAttribute">
+            <summary>
+            Determina si un campo debe ser único, esto permitirá
+            validarlo en el servidor y entregar metadata al cliente
+            para que también lo valide.
+            </summary>
+        </member>
         <member name="T:trifenix.connect.entity_model.Namespace">
              <summary>
              Atributos de trifenix connect,
@@ -579,6 +1448,23 @@
              * **visible**, determina si el campo es o no visible en el modelo entitySearch.
              * **isEntity**, determina si la propiedad representa una entidad, es es una entidad la propiedad tendrá el identificador y el índice de esta.
              * **kindIndex**, determina el tipo de índice
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.input.InputBase">
+            <summary>
+            Clase abstracta que será usado por todos los ingresos de usuario
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.input.InputBase.Id">
+            <summary>
+            identificador de un elemento input, no siempre es obligatorio.
+            </summary>
+            <value>identificador del elemento</value>
+        </member>
+        <member name="T:trifenix.connect.input.Namespace">
+            <summary>
+            Los inputs se refieren a los ingresos de usuario, en este namespace
+            se encuentras el input base donde heredarán todos los ingresos de usuario.
             </summary>
         </member>
         <member name="T:trifenix.connect.mdm_attributes.AutoNumericDependantAttribute">
@@ -630,6 +1516,14 @@
             <summary>
             indica si una clase es agrupada para construir un menú.
             </summary>
+        </member>
+        <member name="M:trifenix.connect.mdm_attributes.EntityGroupMenuAttribute.#ctor(System.String,trifenix.connect.mdm.enums.PhisicalDevice,System.String)">
+            <summary>
+            Atributo para crear menús
+            </summary>
+            <param name="menuId">nombre del menú principal</param>
+            <param name="device">dispositivo de renderización</param>
+            <param name="submenu">nombre del submenú, si tiene</param>
         </member>
         <member name="T:trifenix.connect.mdm_attributes.EntityIndexAttribute">
             <summary>
@@ -686,11 +1580,6 @@
             la creación del formulario de la entidad
             </summary>
         </member>
-        <member name="T:trifenix.connect.mdm_attributes.GroupAttribute">
-            <summary>
-            Determina una agrupación de propiedades, con el fin de definir en la metadata la estructura de un formulario.
-            </summary>
-        </member>
         <member name="T:trifenix.connect.mdm_attributes.Namespace">
              <summary>
              Atributos de trifenix connect,
@@ -725,129 +1614,414 @@
             asigna el tipo de propiedad al elemento padre.
             </summary>
         </member>
-        <member name="T:trifenix.connect.mdm_attributes.UniqueAttribute">
+        <member name="T:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute">
             <summary>
-            Determina si un campo debe ser único, esto permitirá
-            validarlo en el servidor y entregar metadata al cliente
-            para que también lo valide.
+            Determina si una propiedad es usada para llegar al valor 
             </summary>
         </member>
-        <member name="T:trifenix.db.IExistElement">
+        <member name="M:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.#ctor(System.Type,System.Type,System.Boolean)">
             <summary>
-            Interface para mantener todas las consultas a una base de datos o colección que determinen 
-            la existencia de un elemento.
+            Determina a que tipo de elemento pertenece el valor.
+            Si una clase que es de tipo filtro no tiene GlobalFilterValue, usará el mismo valor.
+            </summary>
+            <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
+            <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
+            <param name="jump">Si es jump, solo es para obtener el camino</param>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.TargetType">
+            <summary>
+            Obtiene el tipo del proceso (Barrack)
             </summary>
         </member>
-        <member name="M:trifenix.db.IExistElement.ExistsById``1(System.String)">
+        <member name="P:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.SourceType">
             <summary>
-            Devuelve true si el elemento ya existe.
-            </summary>
-            <typeparam name="T">Tipo de Clase que debe ir a buscar</typeparam>
-            <param name="id">identificador a buscar</param>
-            <returns>true si existe</returns>
-        </member>
-        <member name="M:trifenix.db.IExistElement.ExistsWithPropertyValue``1(System.String,System.String,System.String)">
-            <summary>
-            Determina si existe un elemento con cierta propiedad, asignando el nombre de la propiedad y el valor que debe chequear.
-            si incluye el id, el método debería buscar en toda la base de datos, excepto el elemento con el id ingresado,
-            si no verificará si existe en todos los elementos.
-            El foco de este método es verificar.
-            </summary>
-            <typeparam name="T">Tipo de clase a buscar</typeparam>
-            <param name="namePropCheck">nombre de la propiedad</param>
-            <param name="valueCheck">valor de la propiedad</param>
-            <param name="id">identificador del elemento, que no debe ser incluido</param>
-            <returns>True si existe</returns>
-        </member>
-        <member name="T:trifenix.db.IMainGenericDb`1">
-            <summary>
-            Operaciones básicas para base de datos de persistencia
-            </summary>
-            <typeparam name="T">Todos los elementos que heredan de documentbDb son de base de datos de persistencia</typeparam>
-        </member>
-        <member name="M:trifenix.db.IMainGenericDb`1.CreateUpdate(`0)">
-            <summary>
-            añade o actualiza un elemento en la base de datos.
-            </summary>
-            <param name="entity">entidad a añadir o actualizar</param>
-            <returns>identificador de la entidad</returns>
-        </member>
-        <member name="M:trifenix.db.IMainGenericDb`1.GetEntity(System.String)">
-            <summary>
-            Obtiene la entidad desde un id
-            </summary>
-            <param name="uniqueId">identificador del elemento</param>
-            <returns>Retorna el elemento</returns>
-        </member>
-        <member name="M:trifenix.db.IMainGenericDb`1.DeleteEntity(System.String)">
-            <summary>
-            Borra una entidad
-            </summary>
-            <param name="id">identidicador de la entidad</param>
-            <returns></returns>
-        </member>
-        <member name="M:trifenix.db.IMainGenericDb`1.SingleQuery``1(System.String,System.Object[])">
-            <summary>
-            Ejecuta consulta en la base de datos, asignando un tipo de valor esperado,
-            esto puede ser un int, un string, un bool o incluso una entidad como Persona.
-            las consultas deben obedecer al tipo de dato esperado.
-            </summary>
-            <typeparam name="T2">Tipo de valor esperado</typeparam>
-            <param name="query">consulta a la base de datos</param>
-            <param name="args">parámetros de la consulta</param>
-            <returns>elemento de tipo T2</returns>
-        </member>
-        <member name="M:trifenix.db.IMainGenericDb`1.MultipleQuery``1(System.String,System.Object[])">
-            <summary>
-            Ejecuta una consulta en la base de datos que retornará multiples elementos de tipo T2
-            donde T2 puede ser cualquier tipo que puediera devolver la base de datos,
-            obedeciendo a la consulta como parámetro.
-            </summary>
-            <typeparam name="T2">Tipo a retornar, puede ser string, int u una entidad como Persona</typeparam>
-            <param name="query">consulta</param>
-            <param name="args">argumentos de esa consulta</param>
-            <returns></returns>
-        </member>
-        <member name="T:trifenix.db.ITimeStampDbQueries">
-            <summary>
-            TimeStamp de una base de datos.
+            Nombre del Salto
+            Nombre que se le dará a la ruta para llegar a la entidad de la que se requiere el valor.
+            Cada clase que no sea parte del filtro, pero si parte del camino del filtro para llegar al 
+            valor, usarán el mismo nombre.
             </summary>
         </member>
-        <member name="M:trifenix.db.ITimeStampDbQueries.GetTimestamps``1">
+        <member name="P:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.Jump">
             <summary>
-            Obtiene el TimeStamp de la base de datos
+            Salto
+            si es verdadero, significa que la propiedad o clase que representa una entidad, 
+            no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
             </summary>
-            <typeparam name="T">Documento de la base de datos.</typeparam>
-            <returns></returns>
         </member>
-        <member name="T:trifenix.model.DocumentDb">
+        <member name="T:trifenix.connect.mdm_attributes.ToProcessAttribute">
+            <summary>
+            Determina si una propiedad es usada para llegar a un proceso principal
+            </summary>
+        </member>
+        <member name="M:trifenix.connect.mdm_attributes.ToProcessAttribute.#ctor(System.Type,System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Solo se usa en propiedades de tipo entidad
+            El objetivo es trazar la ruta de una entidad a un proceso
+            de esa manera se podrá obtener la ruta de filtros necesarios
+            para que un elemento filtre un proceso.
+            Para trazar se usa este atributo, en la clase o propiedad
+            si fuera en la clase significaría, que el camino estaría 
+            en una de las clases que tienen el identificador del origen
+            por tanto buscaría en todos los elementos que tengan alguna propiedad
+            que apunta al origen, una vez identificada se revisará si es el objetivo o debe
+            saltar a otro elemento para llegar al objetivo
+            Si el atributo estuviera en la propiedad sería más fácil
+            porque con los datos de la propiedad se podrá saber cual es el próximo paso.
+            </summary>
+            <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
+            <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
+            <param name="jump">Determina si es el inicio de la ruta (true) o es un camino para llegar a ella (false)</param>
+            <param name="isGlobalFilter">Determina si el proceso es global filter</param>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.TargetType">
+            <summary>
+            Obtiene el tipo del proceso (Barrack)
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.SourceType">
+            <summary>
+            Nombre del Salto
+            Nombre que se le dará a la ruta para llegar a la entidad de la que se requiere el valor.
+            Cada clase que no sea parte del filtro, pero si parte del camino del filtro para llegar al 
+            valor, usarán el mismo nombre.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.Jump">
+            <summary>
+            Salto
+            si es verdadero, significa que la propiedad o clase que representa una entidad, 
+            no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.IsGlobalFilter">
+            <summary>
+            Determina si es parte de un filtro global.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.model.DeleteItem">
+            <summary>
+            Elementos de una coleccion que contiene el tipo de documento(Barrack, order, etc)
+            y la propiedad a ser usada para la eliminacion/desactivacion
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.model.DeleteItem.DocumentType">
+            <summary>
+            Tipo de documento(Barrack, order, etc)
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.model.DeleteItem.Property">
+            <summary>
+            Propiedades de un documento
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.model.DocumentDb">
             <summary>
             Documentos de la Base de datos
             </summary>
         </member>
-        <member name="P:trifenix.model.DocumentDb.Id">
+        <member name="P:trifenix.connect.model.DocumentDb.Id">
             <summary>
             Todos los elementos debene llevar un identificador
             </summary>
             <value>identificador de un elemento de base de datos</value>
         </member>
-        <member name="P:trifenix.model.DocumentDb.ClientId">
+        <member name="P:trifenix.connect.model.DocumentDb.ClientId">
             <summary>
             Identificador que solo el usuario puede ver, esto puede ser un autonumérico.
             </summary>
             <value></value>
         </member>
-        <member name="P:trifenix.model.DocumentDb.Enable">
+        <member name="P:trifenix.connect.model.DocumentDb.Enable">
             <summary>
             Indicador de estado de la entidad.
             </summary>
         </member>
-        <member name="P:trifenix.model.DocumentDb.DocumentPartition">
+        <member name="P:trifenix.connect.model.DocumentDb.DocumentPartition">
             <summary>
-            Partición dentro de base de datos documental,
+            Partición dentro de base dedatos documental,
             esto permite a través de un indice particionar un segmento del indice de la base de datos
             por nombre de la entidad o nombre de la clase.
             </summary>        
+        </member>
+        <member name="T:trifenix.connect.search_mdl.Implements`1">
+            <summary>
+            Para generar un entitySearch desde un objeto de una clase, usamos interfaces que permitirán
+            implementar el modelo en diferentes bases de datos.
+            En el modelo existe una entidad y sus propiedades,
+            sus propiedades pueden ser de valor o de referencia,
+            los de referencia vinculan otros entitySearch
+            y los de valor agruparan los distintos tipos de datos que un motor de busqueda soporta (str, int, enums, etc), incluso geo.
+            por cada tipo existe una interface.
+            Dado que debemos generar un objeto de tipo IEntitySearch desde un objeto de una clase
+            es obligatorio conocer el tipo al que se convertirá cada una de las propiedades.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements`1.GeoObjetoToGeoSearch">
+            <summary>
+            Transforma o castea el objeto geo que tendría un objeto de una clase 
+            al objeto geo que usa el modelo entitySearch.
+            el objeto geo es el único no primitivo (bool, date, string, dbl, etc).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:trifenix.connect.search_mdl.Implements`1.GetEntitySearchImplementedType" -->
+        <member name="T:trifenix.connect.search_mdl.Implements">
+            <summary>
+            Trifenix connect genera nuevos objetos a partir de un modelo de base de datos, 
+            como Product. Para poder generar un entitySearch con todas sus propiedades se deben asignar los tipos de conversión.
+            el tener los tipos de cada uno, permitirá generar un objeto desde cero, sin que sea necesario instanciar o crear un nuevo objeto.
+            Para esto se debe definir los tipos de propiedades y clases que serán utilizadas para generar el entitySearch.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.num32">
+            <summary>
+            Tipo de una Clase que implemente INum32Property
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.dbl">
+            <summary>
+            Tipo de una Clase que implemente IDblProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.bl">
+            <summary>
+            Tipo de una Clase que implemente IBoolProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.num64">
+            <summary>
+            Tipo de una Clase que implemente INum64Property
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.dt">
+            <summary>
+            Tipo de una Clase que implemente IDtProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.enm">
+            <summary>
+            Tipo de una Clase que implemente IEnumProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.rel">
+            <summary>
+            Tipo de una Clase que implemente IRelatedProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.str">
+            <summary>
+            Tipo de una Clase que implemente IStrProperty
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.Implements.sug">
+            <summary>
+            Tipo de una Clase que implemente IStrProperty para suggest
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:trifenix.connect.search_mdl.Implements.geo" -->
+        <member name="T:trifenix.connect.search_mdl.ISearchEntity`1">
+            <summary>
+            interface para obtener un entitySearch desde un motor de base de datos
+            </summary>
+            <typeparam name="T">El modelo incluye el campo de tipo geo, la forma de este campo depende de cada tipo de base de datos</typeparam>
+        </member>
+        <member name="M:trifenix.connect.search_mdl.ISearchEntity`1.GetEntity(System.Int32,System.String)">
+            <summary>
+            obtiene una entidad desde una implementación de base de datos del modelo.
+            </summary>
+            <param name="entityKind">tipo de entidad a recuperar</param>
+            <param name="idEntity">identificar de la entidad</param>
+            <returns></returns>
+        </member>
+        <member name="T:trifenix.connect.search_mdl.JsonPreDictionaryHeaders">
+            <summary>
+            Asigna los índices para una determinada clase,
+            cuando se consulta cuales son los índices de una clase
+            este objeto será el retornado.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.index">
+            <summary>
+            Índice de la clase a consultar
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.rel">
+            <summary>
+            índice para las relaciones
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.str">
+            <summary>
+            índices de los tipos strings
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.sug">
+            <summary>
+            Índice de las sugerencias
+            </summary>        
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.enm">
+            <summary>
+            Índice de las enumeraciones
+            </summary>        
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.num32">
+            <summary>
+            Índice de num32
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.num64">
+            <summary>
+            Índice de num64
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.dbl">
+            <summary>
+            Índice de double
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.dt">
+            <summary>
+            Índice de fecha
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.bl">
+            <summary>
+            Índice de bl
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonPreDictionaryHeaders.geo">
+            <summary>
+            Índice de geo
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.search_mdl.JsonDictionaryHeaders">
+            <summary>
+            Una vez obtenido los índices de la propiedad, asignaremos los respectivos nombres,
+            de esta manera podremos saber si el diccionario de un entitySearch
+            ha sido modificado.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.index">
+            <summary>
+            Índice del elemento
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.rel">
+            <summary>
+            Índice de las relaciones y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.str">
+            <summary>
+            Índice de los str y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.sug">
+            <summary>
+            Índice de los sugerencias (suggest) y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.enm">
+            <summary>
+            Índice de las enumeraciones y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.num32">
+            <summary>
+            Índice de los num32 y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.num64">
+            <summary>
+            Índice de los num64 y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.dbl">
+            <summary>
+            Índice de los doubles y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.dt">
+            <summary>
+            Índice de las fechas y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.bl">
+            <summary>
+            Índice de los boleanos y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="P:trifenix.connect.search_mdl.JsonDictionaryHeaders.geo">
+            <summary>
+            Índice de los geos y sus correspondientes nombres en el diccionario
+            </summary>
+            <typeparam name="int">índice en el diccionario</typeparam>
+            <typeparam name="string">nombre en el diccionario</typeparam>
+            <returns>Diccionario con índice y nombre de las propiedades del elemento</returns>
+        </member>
+        <member name="T:trifenix.connect.search_mdl.Namespace">
+            <summary>
+            Operaciones sobre entity Search.
+            </summary>
+        </member>
+        <member name="T:trifenix.exception.CustomException">
+            <summary>
+            Clase encargada de generar mensaje de excepcion
+            </summary>
+        </member>
+        <member name="M:trifenix.exception.CustomException.#ctor">
+            <summary>
+            Constructor de mensaje de excepcion.
+            </summary>
+        </member>
+        <member name="M:trifenix.exception.CustomException.#ctor(System.String)">
+            <summary>
+            Funcion encargada mostrar mensaje especifico.
+            </summary>
+            <param name="mensaje">mensaje custom.</param>
+        </member>
+        <member name="M:trifenix.exception.CustomException.#ctor(System.String,System.Exception)">
+            <summary>
+            Funcion encargada mostrar mensaje especifico.
+            </summary>
+            <param name="message">mensaje custom.</param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:trifenix.exception.CustomException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
         </member>
     </members>
 </doc>
