@@ -25,10 +25,7 @@ namespace trifenix.connect.mdm_attributes
         public EntityKind Kind { get; set; }
 
 
-        /// <summary>
-        /// Determina si es globalFilter
-        /// </summary>
-        public bool IsGlobalFilter { get; set; }
+        
 
 
     }
