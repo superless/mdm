@@ -46,5 +46,10 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public GroupMenuViewer[] Menu { get; set; }
 
+        /// <summary>
+        /// Colección con filtros exitentes en el modelo y su documentación.
+        /// </summary>
+        public FilterProcess[] FiltersProcess { get; set; }
+
     }
 }

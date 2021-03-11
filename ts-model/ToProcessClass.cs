@@ -6,6 +6,21 @@
     /// </summary>
     public class ToProcessClass {
 
+
+        
+        
+        /// <summary>
+        /// Nombre de la ruta de filtros
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Índice en la ruta de filtros.
+        /// </summary>
+        public int Index { get; set; }
+
+
+
         /// <summary>
         /// Determina la ruta para llegar a la entidad de proceso principal (ej. barrack).
         /// </summary>
@@ -53,6 +68,8 @@
         /// Índice del elemento original
         /// </summary>
         public int SourceIndex { get; set; }
+
+        
 
 
 

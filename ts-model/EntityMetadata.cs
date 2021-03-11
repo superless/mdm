@@ -139,6 +139,12 @@ namespace trifenix.connect.mdm.ts_model
         public ToProcessClass[] ToProcessClass { get; set; }
 
 
+
+        /// <summary>
+        /// Colección con filtros exitentes en la entidad y su documentación.
+        /// </summary>
+        public FilterProcess[] FiltersProcess { get; set; }
+
         /// <summary>
         /// Determina los filtros disponibles, de acuerdo al atributo ToGlobalFilterProcess
         /// </summary>
@@ -167,6 +173,11 @@ namespace trifenix.connect.mdm.ts_model
         /// Ruta para llegar a la entidad desde esta.
         /// </summary>
         public ToProcessClass PathToEntity { get; set; }
+
+        /// <summary>
+        /// con el process class tiene el índice y el nombre, en filterprocess tiene la descripción.
+        /// </summary>
+        public FilterProcess FiltersProcess { get; set; }
 
     }
 }

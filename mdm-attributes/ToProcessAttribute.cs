@@ -23,20 +23,24 @@ namespace trifenix.connect.mdm_attributes
         /// porque con los datos de la propiedad se podrá saber cual es el próximo paso.
         /// </summary>
         /// <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
-        /// <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
-        /// <param name="isGlobalFilter">Determina si el proceso es global filter</param>
-        public ToProcessAttribute(Type sourceType, Type targeType, bool isGlobalFilter)
+        /// <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>        
+        /// <param name="index">índice para la documentación, si es 0 es globalFilter</param>
+        public ToProcessAttribute(Type sourceType, Type targeType, int index = 0)
         {
             SourceType = sourceType;
             TargetType = targeType;
-            
-            IsGlobalFilter = isGlobalFilter;
+            Index = index;
         }
 
         /// <summary>
         /// Obtiene el tipo del proceso (Barrack)
         /// </summary>
         public Type TargetType { get; }
+
+        /// <summary>
+        /// índice en la documentación, si es cero es globalFilter
+        /// </summary>
+        public int Index { get; }
 
         /// <summary>
         /// Nombre del Salto
@@ -46,10 +50,10 @@ namespace trifenix.connect.mdm_attributes
         /// </summary>
         public Type SourceType { get; }
 
-        
+
         /// <summary>
         /// Determina si es parte de un filtro global.
         /// </summary>
-        public bool IsGlobalFilter { get; }
+        public bool IsGlobalFilter => Index == 0;
     }
 }
