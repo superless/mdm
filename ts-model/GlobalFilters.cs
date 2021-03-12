@@ -27,7 +27,7 @@ namespace trifenix.connect.mdm.ts_model
         /// a. La especie se relaciona directo con el barrack, por tanto no sería necesario el ToValue, simplemente
         /// indicar el idSpecie para el barrack.
         /// </summary>
-        public Dictionary<string, ToProcessClass[]> ToProcess { get; set; }
+        public ToProcessClass[] ToProcess { get; set; }
 
 
 
