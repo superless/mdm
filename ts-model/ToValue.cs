@@ -3,13 +3,10 @@
     /// <summary>
     /// Ruta para llegar al valor, por ejemplo, desde cost-center a idSeason.
     /// </summary>
-    public class ToValue {
+    public class ToValue : ToProcessClass
+    {
 
-        /// <summary>
-        /// Ruta para llegar al valor de un filtro.
-        /// </summary>
-        public PathToFiltersValue[] FiltersToValue { get; set; }
-
+        
         /// <summary>
         /// Clase a llegar, ej : Barrack
         /// </summary>
