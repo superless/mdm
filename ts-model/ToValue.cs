@@ -3,7 +3,7 @@
     /// <summary>
     /// Ruta para llegar al valor, por ejemplo, desde cost-center a idSeason.
     /// </summary>
-    public class ToValue : ToProcessClass
+    public class ToValue : PathCollection
     {
 
         
