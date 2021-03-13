@@ -21,5 +21,16 @@
         /// Este valor es nullable, debido a que es un comportamiento excepcional
         /// </summary>
         public int? RealIndex { get; set; }
+
+        /// <summary>
+        /// Indica el nombre de la clase a la que apunta el related.
+        /// </summary>
+        public string ClassNameTarget { get; set; }
+
+        /// <summary>
+        /// Determina si es por referencia.
+        /// </summary>
+        public bool IsReference { get; set; }
+
     }
 }

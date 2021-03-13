@@ -30,10 +30,7 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public bool Unique { get; set; }
 
-        /// <summary>
-        /// Determina si es validado por referencia.
-        /// </summary>
-        public bool ReferenceValidation { get; set; }
+        
         
         /// <summary>
         /// Determina si la propiedad es visible en un formulario.
