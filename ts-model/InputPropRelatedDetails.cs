@@ -17,7 +17,9 @@
         public string ClassInput { get; set; }
 
 
-
+        /// <summary>
+        /// nombre de la clase Input Target
+        /// </summary>
         public string ClassInputTarget { get; set; }
 
 
