@@ -30,8 +30,12 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public bool Unique { get; set; }
 
-        
-        
+
+        /// <summary>
+        /// Tipo de propiedad para el entitySearch.
+        /// </summary>
+        public KindProperty KindProperty { get; set; }
+
         /// <summary>
         /// Determina si la propiedad es visible en un formulario.
         /// </summary>
