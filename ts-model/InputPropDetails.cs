@@ -10,6 +10,11 @@
         /// Nombre del mismo campo en el modelo.
         /// </summary>
         public string ModelPropName { get; set; }
+
+        /// <summary>
+        /// Nombre de la clase input
+        /// </summary>
+        public string ClassInput { get; set; }
     }
 
 
