@@ -19,6 +19,11 @@ namespace trifenix.connect.mdm.ts_model
         public Dictionary<string, InputPropRelatedDetails> InputRelatedDetails { get; set; }
 
         /// <summary>
+        /// Cada una de las propiedades de tipo related.
+        /// </summary>
+        public Dictionary<string, InputPropEnumDetails> InputEnumDetails { get; set; }
+
+        /// <summary>
         /// Recursividad con los campos de tipo objeto con sus propias propiedades
         /// </summary>
         public Dictionary<string, InputDetails> RelatedInputs { get; set; }
