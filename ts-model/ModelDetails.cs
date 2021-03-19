@@ -13,6 +13,12 @@ namespace trifenix.connect.mdm.ts_model
 
 
         /// <summary>
+        /// enumeraciones
+        /// </summary>
+        public Dictionary<string, PropertyMetadadataEnum> PropsEnumDetails { get; set; }
+
+
+        /// <summary>
         /// Cada una de las propiedades de tipo related.
         /// </summary>
         public Dictionary<string, RelatedPropertyMetadata> RelatedDetails { get; set; }
