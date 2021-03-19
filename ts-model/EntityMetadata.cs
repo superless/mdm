@@ -56,10 +56,7 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public string ClassName { get; set; }
 
-        /// <summary>
-        /// Nombre de la clase input si existe
-        /// </summary>
-        public string ClassNameInput { get; set; }
+        
 
         /// <summary>
         /// Determina si es readonly.
