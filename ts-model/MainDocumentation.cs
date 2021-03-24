@@ -38,6 +38,12 @@ namespace trifenix.connect.mdm.ts_model
         /// </summary>
         public Dictionary<int, EntitySearchDisplayInfo> Enums { get; set; }
 
+
+        /// <summary>
+        /// Documentación de Doubles
+        /// </summary>
+        public Dictionary<int, EntitySearchDisplayInfo> Dbls { get; set; }
+
         /// <summary>
         /// Documentación de Entidades
         /// </summary>
