@@ -26,7 +26,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Recursividad con los campos de tipo objeto con sus propias propiedades
         /// </summary>
-        public Dictionary<string, ModelDetails> RelatedInputs { get; set; }
+        public Dictionary<string, ModelDetails> RelatedModels { get; set; }
     }
 
 
