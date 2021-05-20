@@ -25,7 +25,7 @@
         /// <summary>
         /// con el process class tiene el índice y el nombre, en filterprocess tiene la descripción.
         /// </summary>
-        public FilterProcess FiltersProcess { get; set; }
+        public DocFilter docFilter { get; set; }
 
     }
 }

@@ -21,7 +21,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Coleccion de metadata de cada entidad del modelo
         /// </summary>
-        public EntityMetadata[] Indexes { get; set; }
+        public EntityMetadata[] MdmEntities { get; set; }
 
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace trifenix.connect.mdm.ts_model
         /// <summary>
         /// Colección con filtros exitentes en el modelo y su documentación.
         /// </summary>
-        public FilterProcess[] FiltersProcess { get; set; }
+        public DocFilter[] DocFilters { get; set; }
 
     }
 }

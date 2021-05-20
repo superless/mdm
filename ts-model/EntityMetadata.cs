@@ -138,14 +138,14 @@ namespace trifenix.connect.mdm.ts_model
         /// Ruta a cualquier entidad, generalmente se indicarán aquellas que se quiera que este 
         /// sea filtro.
         /// </summary>
-        public ToProcessClass[] ToProcessClass { get; set; }
+        public ToProcessClass[] ToProcessFilter { get; set; }
 
 
 
         /// <summary>
         /// Colección con filtros exitentes en la entidad y su documentación.
         /// </summary>
-        public FilterProcess[] FiltersProcess { get; set; }
+        public DocFilter[] DocFilters { get; set; }
 
         /// <summary>
         /// Determina los filtros disponibles, de acuerdo al atributo ToGlobalFilterProcess

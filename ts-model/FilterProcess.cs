@@ -5,7 +5,7 @@
     /// Elemento con la documentación de cada filtro 
     /// existe a través del atributo y elemento de metadatos ToPeocess
     /// </summary>
-    public class FilterProcess
+    public class DocFilter
     {
 
         /// <summary>

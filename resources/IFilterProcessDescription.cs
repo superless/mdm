@@ -11,6 +11,6 @@ namespace trifenix.connect.mdm.resources
         /// </summary>
         /// <param name="index">índice para el filtro</param>
         /// <returns>Descripción</returns>
-        FilterProcess GetFilterProcessDescription(int index);
+        DocFilter GetFilterProcessDescription(int index);
     }
 }

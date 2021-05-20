@@ -450,6 +450,18 @@
             determina para quién aplicará la metadata.
             </summary>
         </member>
+        <member name="T:trifenix.connect.mdm.resources.IFilterProcessDescription">
+            <summary>
+            Interface para obtener la descripción de filtros.
+            </summary>
+        </member>
+        <member name="M:trifenix.connect.mdm.resources.IFilterProcessDescription.GetFilterProcessDescription(System.Int32)">
+            <summary>
+            Obtiene el detalla y descripción de un filtro
+            </summary>
+            <param name="index">índice para el filtro</param>
+            <returns>Descripción</returns>
+        </member>
         <member name="T:trifenix.connect.mdm.resources.IMdmDocumentation">
             <summary>
             Documentación de cada elemeentos del modelo entitity search.
@@ -610,6 +622,11 @@
             sea filtro.
             </summary>
         </member>
+        <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.FiltersProcess">
+            <summary>
+            Colección con filtros exitentes en la entidad y su documentación.
+            </summary>
+        </member>
         <member name="P:trifenix.connect.mdm.ts_model.EntityMetadata.FiltersAvailable">
             <summary>
             Determina los filtros disponibles, de acuerdo al atributo ToGlobalFilterProcess
@@ -634,6 +651,11 @@
         <member name="P:trifenix.connect.mdm.ts_model.RelatedItem.PathToEntity">
             <summary>
             Ruta para llegar a la entidad desde esta.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.RelatedItem.FiltersProcess">
+            <summary>
+            con el process class tiene el índice y el nombre, en filterprocess tiene la descripción.
             </summary>
         </member>
         <member name="T:trifenix.connect.mdm.ts_model.EntitySearchDisplayInfo">
@@ -773,6 +795,27 @@
         <member name="P:trifenix.connect.mdm.ts_model.FilterModel.DoubleFilters">
             <summary>
             filtro de tipo double.
+            </summary>
+        </member>
+        <member name="T:trifenix.connect.mdm.ts_model.FilterProcess">
+            <summary>
+            Elemento con la documentación de cada filtro 
+            existe a través del atributo y elemento de metadatos ToPeocess
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterProcess.Index">
+            <summary>
+            Índice del filtro, usado con el atributo ToProcess
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterProcess.EnumDescription">
+            <summary>
+            Corresponde a la descripción del item de la enumeración fuente.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.FilterProcess.EnumName">
+            <summary>
+            Nombre del item de la enumeración fuente.
             </summary>
         </member>
         <member name="T:trifenix.connect.mdm.ts_model.GeoPointTs">
@@ -1095,6 +1138,11 @@
             Menú generado con la metadata.
             </summary>
         </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ModelMetaData.FiltersProcess">
+            <summary>
+            Colección con filtros exitentes en el modelo y su documentación.
+            </summary>
+        </member>
         <member name="T:trifenix.connect.mdm.ts_model.OrderItem">
             <summary>
             Item de Ordernamiento, permite ordenar una consulta.
@@ -1123,28 +1171,28 @@
             Por cada filtro se debe llegar a una colección de órdenes, pre-ordenes, ejecuciones, etc.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.ClassName">
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.TargetClass">
             <summary>
             el nombre de la clase para el valor
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginalClassName">
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginClass">
             <summary>
             el nombre de la clase que está solicitando el valor.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.IdProperty">
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.PropertyName">
             <summary>
-            
+            Identificador de la propiedad de 
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.RealIndex">
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginIndex">
             <summary>
             índice de la clase a consultar, esto permite poder hacer consultas de tipo Search.
             por ejemplo, filter = index eq {RealIndex} and rel/index == {OriginalIndex} and rel/id = {cost-center-id}
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.OriginalIndex">
+        <member name="P:trifenix.connect.mdm.ts_model.PathToFiltersValue.TargetIndex">
             <summary>
             índice del elemento a conseguir el valor.
             </summary>
@@ -1354,27 +1402,57 @@
             En este caso, al ser barrack el corazón, usará esta clase para determinar la ruta.
             </summary>
         </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.Name">
+            <summary>
+            Nombre de la ruta de filtros
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.Index">
+            <summary>
+            Índice en la ruta de filtros.
+            </summary>
+        </member>
         <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.PathToProcess">
             <summary>
             Determina la ruta para llegar a la entidad de proceso principal (ej. barrack).
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.ProcessNameClass">
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.TargetName">
             <summary>
             Clase a llegar, ej : Barrack
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.IndexProcessClass">
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.TargetIndex">
             <summary>
             índice de la clase, para usarlo en la consulta.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.origin">
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.TargetRealIndex">
+            <summary>
+            Existe un caso en partícular en Barrack, donde existen dos propiedades que apuntan a la misma entidad
+            Pollinator y Variety apuntan a variety.
+            Para solucionar esto se usa Index y RealIndex
+            En el caso de ToProcess se podría dar el siguiente ejemplo:
+            Tengo variedad y quiero ver todas las órdenes que hayan usado un barrack que uso esta como polinizador
+            y también de ver las órdenes que hayan usado un barrack que uso esta como variedad.
+            Para poder llegar a esa ruta, el atributo toProcess debe saltar desde variedad,
+            donde tendrá el atributo en su clase
+            hasta cada una de las propiedades.
+            para el resto no sería necesario llegar a la propiedad
+            el nombre de la clave que aloja esta clase, deberá ser formado por el {SourceName}-{TargetName} y la 
+            propiedad que identifica la variedad (idPollinator u idVariety).
+            El nombre de la propiedad es obtenido del último salto de PathToProcess
+            y de esta propiedad se obtiene el index y el real index, donde el real index es el índice de variety, que 
+            será donde buscará realmente los varieties y el index, que en este caso es Pollinator, solo servirá 
+            para diferenciar las propiedades, para el caso, poder filtrar variety como pollinator o como variety propiamente tal.
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.SourceName">
             <summary>
             nombre de la clase original o ruta del filtro.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.IndexOrigin">
+        <member name="P:trifenix.connect.mdm.ts_model.ToProcessClass.SourceIndex">
             <summary>
             Índice del elemento original
             </summary>
@@ -1389,22 +1467,22 @@
             Ruta para llegar al valor de un filtro.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToValue.ProcessNameClass">
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.ValueClass">
             <summary>
             Clase a llegar, ej : Barrack
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToValue.IndexProcessClass">
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.ValueIndex">
             <summary>
             índice de la clase, para usarlo en la consulta.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToValue.origin">
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.OriginClass">
             <summary>
             nombre de la clase original o ruta del filtro.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm.ts_model.ToValue.IndexOrigin">
+        <member name="P:trifenix.connect.mdm.ts_model.ToValue.OriginIndex">
             <summary>
             Índice del elemento original
             </summary>
@@ -1619,14 +1697,13 @@
             Determina si una propiedad es usada para llegar al valor 
             </summary>
         </member>
-        <member name="M:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.#ctor(System.Type,System.Type,System.Boolean)">
+        <member name="M:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.#ctor(System.Type,System.Type)">
             <summary>
             Determina a que tipo de elemento pertenece el valor.
             Si una clase que es de tipo filtro no tiene GlobalFilterValue, usará el mismo valor.
             </summary>
             <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
             <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
-            <param name="jump">Si es jump, solo es para obtener el camino</param>
         </member>
         <member name="P:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.TargetType">
             <summary>
@@ -1641,19 +1718,12 @@
             valor, usarán el mismo nombre.
             </summary>
         </member>
-        <member name="P:trifenix.connect.mdm_attributes.ToGlobalFilterValueAttribute.Jump">
-            <summary>
-            Salto
-            si es verdadero, significa que la propiedad o clase que representa una entidad, 
-            no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
-            </summary>
-        </member>
         <member name="T:trifenix.connect.mdm_attributes.ToProcessAttribute">
             <summary>
             Determina si una propiedad es usada para llegar a un proceso principal
             </summary>
         </member>
-        <member name="M:trifenix.connect.mdm_attributes.ToProcessAttribute.#ctor(System.Type,System.Type,System.Boolean,System.Boolean)">
+        <member name="M:trifenix.connect.mdm_attributes.ToProcessAttribute.#ctor(System.Type,System.Type,System.Int32)">
             <summary>
             Solo se usa en propiedades de tipo entidad
             El objetivo es trazar la ruta de una entidad a un proceso
@@ -1669,13 +1739,17 @@
             porque con los datos de la propiedad se podrá saber cual es el próximo paso.
             </summary>
             <param name="sourceType">con el tipo de origin se puede generar el nombre</param>
-            <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>
-            <param name="jump">Determina si es el inicio de la ruta (true) o es un camino para llegar a ella (false)</param>
-            <param name="isGlobalFilter">Determina si el proceso es global filter</param>
+            <param name="targeType">Tipo de procesos (Barrack, por ej.)</param>        
+            <param name="index">índice para la documentación, si es 0 es globalFilter</param>
         </member>
         <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.TargetType">
             <summary>
             Obtiene el tipo del proceso (Barrack)
+            </summary>
+        </member>
+        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.Index">
+            <summary>
+            índice en la documentación, si es cero es globalFilter
             </summary>
         </member>
         <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.SourceType">
@@ -1684,13 +1758,6 @@
             Nombre que se le dará a la ruta para llegar a la entidad de la que se requiere el valor.
             Cada clase que no sea parte del filtro, pero si parte del camino del filtro para llegar al 
             valor, usarán el mismo nombre.
-            </summary>
-        </member>
-        <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.Jump">
-            <summary>
-            Salto
-            si es verdadero, significa que la propiedad o clase que representa una entidad, 
-            no es un filtro, sino que solo registra el salto del filtro para llegar al valor.
             </summary>
         </member>
         <member name="P:trifenix.connect.mdm_attributes.ToProcessAttribute.IsGlobalFilter">
